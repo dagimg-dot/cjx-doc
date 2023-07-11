@@ -1,7 +1,8 @@
+import Navermi from "./component/navermi"
 function App() {
   return (
     <div>
-      <h1 className="underline">Hello world!</h1>
+      <Navermi/>
     </div>
   );
 }
