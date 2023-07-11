@@ -1,7 +1,7 @@
 import { FaGithub } from "react-icons/fa";
 import logo from "../assets/image/cjx-logo.png"
 import 'typeface-poppins'
-export default function Navermi() {
+export default function NavigationBar() {
   return (
     <div className="flex justify-between px-5 bg-black text-white font-sans">
       <div>

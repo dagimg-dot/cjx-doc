@@ -1,8 +1,8 @@
-import Navermi from "./component/navermi"
+import NavigationBar from "./component/NavigationBar"
 function App() {
   return (
     <div>
-      <Navermi/>
+      <NavigationBar/>
     </div>
   );
 }
