@@ -17,9 +17,9 @@ export default function NavigationBar() {
           <a href="#">Contact</a>
         </li>
       </div>
-      <div className="py-3">
+      <div className="flex py-3 items-center">
         <li className="list-none">
-          <a href="#" ><FaGithub/></a>
+          <a href="https://github.com/dagimg-dot/cjx-cli-tool" target={"_blank"} title={"Github Link"} ><FaGithub className="scale-125"/></a>
         </li>
       </div>
     </div>
