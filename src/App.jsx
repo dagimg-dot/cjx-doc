@@ -1,7 +1,8 @@
+import NavigationBar from "./component/NavigationBar"
 function App() {
   return (
     <div>
-      <h1 className="underline">Hello world!</h1>
+      <NavigationBar/>
     </div>
   );
 }
