@@ -1,7 +1,7 @@
 
 export default function CjxBodySlogan(){
     return (
-        <div className="flex flex-col justify-center items-center absolute top-55">
+        <div className="flex flex-col justify-center items-center absolute top-55 text-custom-pink">
             <p className="text-[90px]  tracking-[-6.42px] ">
                 Effortless JavaFX Environment Setup in VS Code</p>
                 <p className="text-[44px]">Get Coding in minutes</p>
