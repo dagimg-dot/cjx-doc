@@ -21,6 +21,8 @@ export default {
       },
       colors:{
         "custom-pink":"#D49E9E",
+        "custom-white":"#27272A",
+        "bash-white":"#E4E4E7"
       }
     },
   },
