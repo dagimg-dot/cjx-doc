@@ -5,7 +5,7 @@ import { useState } from 'react';
 import React from 'react';
 
 export default function CjxBash() {
-        const bashCommands = ["cjx init","cjx setup","cjx create simple <Project Name","cjx clone <Project url>","cjx doctor"]
+        const bashCommands = ["cjx init","cjx setup","cjx create simple <Project Name>","cjx clone <Project url>","cjx doctor"]
         const [currentIndex,setCurrentIndex] = useState(0);
         const [currentCharacterIndex,setCurrentCharacterIndex] = useState(0);
         const [displayedCommand, setDisplayedCommand] = useState('');
