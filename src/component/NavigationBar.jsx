@@ -11,10 +11,10 @@ export default function NavigationBar() {
       </div>
       <div className="flex py-3">
         <li className="mx-auto list-none px-3">
-          <a href="#" className="text-[11px] text-header-white">DOCS</a>
+          <a href="#" className="text-[11px] text-header-white tracking-[1.5px]">DOCS</a>
         </li>
         <li className="mx-auto list-none px-3">
-          <a href="#" className="text-[11px] text-header-white">CONTACT</a>
+          <a href="#" className="text-[11px] text-header-white tracking-[1.5px]">CONTACT</a>
         </li>
       </div>
       <div className="flex py-3 items-center">
