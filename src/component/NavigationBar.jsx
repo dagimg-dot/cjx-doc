@@ -3,10 +3,10 @@ import logo from "../assets/image/cjx-logo.png"
 import 'typeface-poppins'
 export default function NavigationBar() {
   return (
-    <div className="flex justify-between px-5 bg-black text-white font-sans">
+    <div className="flex justify-between p-5 pl-8 bg-black text-white font-sans">
       <div>
         <li className="list-none ">
-          <img src={logo} className="w-10 h-10" />
+          <img src={logo} className="w-12 h-12" />
         </li>
       </div>
       <div className="flex py-3">
@@ -17,9 +17,9 @@ export default function NavigationBar() {
           <a href="#">Contact</a>
         </li>
       </div>
-      <div className="py-3">
+      <div className="flex py-3 items-center">
         <li className="list-none">
-          <a href="#" ><FaGithub/></a>
+          <a href="https://github.com/dagimg-dot/cjx-cli-tool" target={"_blank"} title={"Github Link"} ><FaGithub className="scale-150"/></a>
         </li>
       </div>
     </div>
