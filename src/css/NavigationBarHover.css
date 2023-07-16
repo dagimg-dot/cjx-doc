@@ -1,5 +1,5 @@
 
-.nav-bar:hover::after {
+.nav-bar::after {
     content: " ";
     position: absolute;
     background-color: #e97770;
@@ -9,7 +9,7 @@
     bottom: -10px;
     padding: 0;
     margin: 0;
-    transition: 0.5s;
+    transition: width 0.3s;
   }
   .nav-bar:hover::after {
     width: 100%;
