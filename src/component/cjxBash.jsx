@@ -9,62 +9,33 @@ export default function CjxBash() {
         const [currentIndex,setCurrentIndex] = useState(0);
         const [currentCharacterIndex,setCurrentCharacterIndex] = useState(0);
         const [displayedCommand, setDisplayedCommand] = useState('');
-        // const [isTyping, setIsTyping] = useState(true);
-
         
-        // useEffect(() => {
-        //   const command = bashCommands[currentIndex];
-        //   let currentCharacterIndex = 0;
-        //   let typingTimer;
+        useEffect(() => {
+          const command = bashCommands[currentIndex];
+          let typingTimer;
 
-        //   const startTyping = () => {
-        //     typingTimer = setInterval(() => {
-        //       setDisplayedCommand(prevCommand => prevCommand + command[currentCharacterIndex]);
-        //       currentCharacterIndex++;
+          const startTyping = () => {
+            typingTimer = setInterval(() => {
+              if (currentCharacterIndex < command.length) {
+                setDisplayedCommand(prevCommand => prevCommand + command[currentCharacterIndex]);
+                setCurrentCharacterIndex(prevIndex => prevIndex + 1);
+              } else {
+                clearInterval(typingTimer);
+                setTimeout(() => {
+                  setDisplayedCommand('');
+                  setCurrentIndex(prevIndex => (prevIndex + 1) % bashCommands.length);
+                  setCurrentCharacterIndex(0);
+                }, 1000);
+              }
+            }, 100);
+          };
 
-        //       if (currentCharacterIndex === command.length) {
-        //         clearInterval(typingTimer);
-        //         setTimeout(() => {
-        //           setDisplayedCommand('');
-        //           setCurrentIndex(prevIndex => (prevIndex + 1) % bashCommands.length);
-        //         }, 1000);
-        //       }
-        //     }, 100);
-        //   };
+      startTyping();
 
-        //   startTyping();
-
-        //   return () => {
-        //     clearInterval(typingTimer);
-        //   };
-        // }, [currentCharacterIndex, currentIndex]);
-        
-  useEffect(() => {
-    const command = bashCommands[currentIndex];
-    let typingTimer;
-
-    const startTyping = () => {
-      typingTimer = setInterval(() => {
-        if (currentCharacterIndex < command.length) {
-          setDisplayedCommand(prevCommand => prevCommand + command[currentCharacterIndex]);
-          setCurrentCharacterIndex(prevIndex => prevIndex + 1);
-        } else {
-          clearInterval(typingTimer);
-          setTimeout(() => {
-            setDisplayedCommand('');
-            setCurrentIndex(prevIndex => (prevIndex + 1) % bashCommands.length);
-            setCurrentCharacterIndex(0);
-          }, 1000);
-        }
-      }, 100);
-    };
-
-    startTyping();
-
-    return () => {
-      clearInterval(typingTimer);
-    };
-  }, [bashCommands, currentIndex]);
+      return () => {
+        clearInterval(typingTimer);
+      };
+    }, [bashCommands, currentIndex]);
     
     return (
         <div className="flex flex-col bg-black w-[350px] h-[250px] font-consolas text-bash-white mt-18 mr-60 border border-custom-white rounded-lg">
