@@ -22,7 +22,9 @@ export default {
       colors:{
         "custom-pink":"#D49E9E",
         "custom-white":"#27272A",
-        "bash-white":"#E4E4E7"
+        "bash-white":"#E4E4E7",
+        "header-white":"#BCBCBC",
+        "header-black":"rgba(217, 217, 217, 0.00)"
       }
     },
   },
