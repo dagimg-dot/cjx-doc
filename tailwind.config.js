@@ -13,7 +13,7 @@ export default {
           "fontStyle": "normal",
           "fontWeight": "normal",
           "fontDisplay": "swap",
-          "src": "url('./src/fonts/Consolas.ttf') format('truetype')"
+          "src": "url('./src/assets/fonts/Consolas.ttf') format('truetype')"
         },
       },
       backgroundImage: {
