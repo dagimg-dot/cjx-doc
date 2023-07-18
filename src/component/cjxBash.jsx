@@ -25,7 +25,7 @@ export default function CjxBash() {
                   setDisplayedCommand('');
                   setCurrentIndex(prevIndex => (prevIndex + 1) % bashCommands.length);
                   setCurrentCharacterIndex(0);
-                }, 1000);
+                }, 2000);
               }
             }, 100);
           };
