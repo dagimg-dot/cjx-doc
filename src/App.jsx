@@ -5,8 +5,10 @@ import MoreInfo from "./component/MoreInfo";
 function App() {
   return (
     <div className="bg-bodyGradient">
-      <NavigationBar/>
-      <CjxBody/>
+      <div className="w-screen h-screen">
+        <NavigationBar/>
+        <CjxBody/>
+      </div>
       <MoreInfo/>
     </div>
   );
