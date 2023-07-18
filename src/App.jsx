@@ -9,7 +9,7 @@ function App() {
         <NavigationBar/>
         <CjxBody/>
       </div>
-      <MoreInfo/>
+      <div className="w-screen h-screen"><MoreInfo/></div>
     </div>
   );
 }
