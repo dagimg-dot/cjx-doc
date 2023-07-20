@@ -1,17 +1,13 @@
-import NavigationBar from "./component/NavigationBar"
-import CjxBody from "./component/cjxBody"
-import MoreInfo from "./component/MoreInfo";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/home";
+import Contact from "./pages/contact";
 
-function App() {
+export default function App() {
   return (
-    <div className="bg-bodyGradient">
-      <div className="w-screen h-screen">
-        <NavigationBar/>
-        <CjxBody/>
-      </div>
-      <div className="w-screen h-screen"><MoreInfo/></div>
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
+      </Routes>
   );
 }
 
-export default App;
