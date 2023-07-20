@@ -1,4 +1,5 @@
 import { FaGithub } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import logo from "../assets/image/cjx-logo.png"
 import 'typeface-poppins'
 import '../css/NavigationBarHover.css'
@@ -17,7 +18,7 @@ export default function NavigationBar() {
           <a href="#" className="text-[11px] text-header-white tracking-[1.5px] relative nav-bar ">DOCS<span className=""></span></a>
         </li>
         <li className="mx-auto list-none px-3">
-          <a href="#" className="text-[11px] text-header-white tracking-[1.5px] relative nav-bar">CONTACT<span className=""></span></a>
+          <Link to="contact" className="text-[11px] text-header-white tracking-[1.5px] relative nav-bar">CONTACT<span className=""></span></Link>
         </li>
       </div>
       <div className="flex py-3 px-5 items-center">
