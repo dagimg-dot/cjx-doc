@@ -15,7 +15,7 @@ export default function NavigationBar() {
       </div>
       <div className="flex py-3">
         <li className="mx-auto list-none px-3">
-          <a href="#" className="text-[11px] text-header-white tracking-[1.5px] relative nav-bar ">DOCS<span className=""></span></a>
+          <Link to="docs" className="text-[11px] text-header-white tracking-[1.5px] relative nav-bar ">DOCS<span className=""></span></Link>
         </li>
         <li className="mx-auto list-none px-3">
           <Link to="contact" className="text-[11px] text-header-white tracking-[1.5px] relative nav-bar">CONTACT<span className=""></span></Link>
