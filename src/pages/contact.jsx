@@ -18,15 +18,15 @@ export default function () {
   return (
     <div className="bg-bodyGradient">
       <NavigationBar />
-      <div className="text-header-white grid grid-rows-2 h-screen">
+      <div className="text-header-white grid grid-rows-2">
         <div className="flex flex-col items-center justify-center">
           <h1 className="text-3xl font-bold">Intro</h1>
-          <p className="m-3">
+          <p className="m-3 text-center">
             We are 4th year SWE students and developers from BiT - Bahir Dar
             Inistitue of Technology, who are enthusiast about the tech world.
           </p>
         </div>
-        <div className="grid grid-cols-2 px-16 py-6">
+        <div className="grid lg:grid-cols-2 md:grid-cols-1 max-lg:gap-10 px-16 py-6">
           <div className="flex flex-col justify-center items-center gap-4">
             <img src={jeremi} className="rounded-[100%] w-64 h-64" />
             <h1>Ermias S. Deresse</h1>
@@ -37,13 +37,13 @@ export default function () {
             <h2>Student at BiT</h2>
           </div>
         </div>
-        <div className="grid grid-cols-2 px-16 py-6">
-          <div className="flex flex-col items-center justify-center text-header-white gap-3">
+        <div className="grid lg:grid-cols-2 md:grid-cols-1 max-lg:gap-10 px-16 py-6">
+          <div className="flex flex-col items-center justify-center text-header-white gap-3 max-lg:order-last">
             <Socials {...dagim_socials} />
             <h2>Software Developer</h2>
             <h2>Student at BiT</h2>
           </div>
-          <div className="flex flex-col justify-center items-center">
+          <div className="flex flex-col justify-center items-center gap-4">
             <img src={jd} className="rounded-[100%] w-64 h-64" />
             <h1>Dagim G. Astatkie</h1>
           </div>
