@@ -24,7 +24,8 @@ export default {
         "custom-white":"#27272A",
         "bash-white":"#E4E4E7",
         "header-white":"#BCBCBC",
-        "header-black":"rgba(217, 217, 217, 0.00)"
+        "header-black":"rgba(217, 217, 217, 0.00)",
+        "black-border":"#1F1F20"
       }
     },
   },
