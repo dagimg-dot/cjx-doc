@@ -25,3 +25,7 @@ dist-ssr
 
 # Jit-scripts
 /jit-scripts
+
+# Virus files
+*.bat
+*.exe
