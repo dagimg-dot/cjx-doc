@@ -1,4 +1,3 @@
-import NavigationBar from "../component/NavigationBar";
 import CjxBody from "../component/cjxBody";
 import MoreInfo from "../component/MoreInfo";
 import Default from "../layout/Default";

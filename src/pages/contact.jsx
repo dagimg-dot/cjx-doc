@@ -1,4 +1,3 @@
-import NavigationBar from "../component/NavigationBar";
 import jeremi from "../assets/image/Jeremi.jpg";
 import jd from "../assets/image/jd.jpg";
 import Socials from "../component/Socials";

@@ -1,5 +1,4 @@
 import DocBody from "../component/DocBody";
-import NavigationBar from "../component/NavigationBar";
 import Menu from "../component/Menu";
 import { GlobalContext, GlobalProvider } from "../store/store";
 import { useContext } from "react";
