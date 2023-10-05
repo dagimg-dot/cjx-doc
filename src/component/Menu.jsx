@@ -1,9 +1,9 @@
 import Submenu from "./Submenu";
 
 export default function Menu({
-  state,
+  // state,
   menu_name,
-  submenu_names,
+  // submenu_names,
   clickHandler,
 }) {
   return (
@@ -13,7 +13,7 @@ export default function Menu({
         onClick={() => clickHandler(menu_name)}
       >
         <div className="cursor-pointer">{menu_name}</div>
-        <div>
+        {/* <div>
           {state[menu_name] ? (
             <svg
               width={16}
@@ -35,16 +35,16 @@ export default function Menu({
               <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
             </svg>
           )}
-        </div>
+        </div> */}
       </button>
-      {state[menu_name] ? (
+      {/* {state[menu_name] ? (
         <div>
           {<Submenu submenu_name={submenu_names[0]} />}
           <Submenu submenu_name={submenu_names[1]} />
           <Submenu submenu_name={submenu_names[2]} />
           <Submenu submenu_name={submenu_names[3]} />
         </div>
-      ) : null}
+      ) : null} */}
 
       {/* {submenu_names.map((submenu_item) => {
         // <Submenu key={submenu_item} submenu_name={submenu_item} />;
