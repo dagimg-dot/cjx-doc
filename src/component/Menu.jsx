@@ -4,8 +4,9 @@ import { useContext } from "react";
 
 export default function Menu({ menu_name }) {
   const { parent, handleParentClick } = useContext(GlobalContext);
-  console.log(parent);
-  console.log(parent[menu_name].isSelected);
+
+  const isSelected = parent[menu_name].isSelected;
+  const children = Object.keys(parent[menu_name].children);
 
   return (
     <>
@@ -15,7 +16,7 @@ export default function Menu({ menu_name }) {
       >
         <div className="cursor-pointer">{menu_name}</div>
         <div>
-          {parent[menu_name].isSelected ? (
+          {isSelected ? (
             <svg
               width={16}
               height={16}
@@ -38,19 +39,13 @@ export default function Menu({ menu_name }) {
           )}
         </div>
       </button>
-      {/* {state[menu_name] ? (
+      {isSelected && (
         <div>
-          {<Submenu submenu_name={submenu_names[0]} />}
-          <Submenu submenu_name={submenu_names[1]} />
-          <Submenu submenu_name={submenu_names[2]} />
-          <Submenu submenu_name={submenu_names[3]} />
+          {children.map((submenu_item) => {
+            <Submenu key={submenu_item} submenu_name={submenu_item} />;
+          })}
         </div>
-      ) : null} */}
-
-      {/* {submenu_names.map((submenu_item) => {
-        // <Submenu key={submenu_item} submenu_name={submenu_item} />;
-        console.log(submenu_item)
-      })} */}
+      )}
     </>
   );
 }
