@@ -1,20 +1,21 @@
 import Submenu from "./Submenu";
+import { GlobalContext } from "../store/store";
+import { useContext } from "react";
 
-export default function Menu({
-  // state,
-  menu_name,
-  // submenu_names,
-  clickHandler,
-}) {
+export default function Menu({ menu_name }) {
+  const { parent, handleParentClick } = useContext(GlobalContext);
+  console.log(parent);
+  console.log(parent[menu_name].isSelected);
+
   return (
     <>
       <button
         className="flex cursor-pointer gap-3 text-white items-center px-2 py-4"
-        onClick={() => clickHandler(menu_name)}
+        onClick={() => handleParentClick(menu_name)}
       >
         <div className="cursor-pointer">{menu_name}</div>
-        {/* <div>
-          {state[menu_name] ? (
+        <div>
+          {parent[menu_name].isSelected ? (
             <svg
               width={16}
               height={16}
@@ -35,7 +36,7 @@ export default function Menu({
               <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
             </svg>
           )}
-        </div> */}
+        </div>
       </button>
       {/* {state[menu_name] ? (
         <div>

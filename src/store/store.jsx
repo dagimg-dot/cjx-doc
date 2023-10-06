@@ -31,7 +31,12 @@ export const GlobalContext = createContext(initialState);
 
 export const GlobalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(Reducer, initialState);
+  const handleParentClick = (menu_name) => {
+    dispatch({ type: "PARENT_CLICK", payload: menu_name });
+  };
   return (
-    <GlobalContext.Provider value={state}>{children}</GlobalContext.Provider>
+    <GlobalContext.Provider value={{ parent: state.parent, handleParentClick }}>
+      {children}
+    </GlobalContext.Provider>
   );
 };
