@@ -7,12 +7,14 @@ import Default from "../layout/Default";
 export default function () {
   const { parent } = useContext(GlobalContext);
 
+  const parents = Object.keys(parent);
+
   return (
     <div className="bg-bodyGradient w-screen h-screen">
       <Default>
         <h1 className="text-white">Docs</h1>
         <GlobalProvider>
-          {Object.keys(parent).map((menu_item, index) => (
+          {parents.map((menu_item) => (
             <Menu key={menu_item} menu_name={menu_item} />
           ))}
           <DocBody />
