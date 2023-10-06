@@ -41,9 +41,9 @@ export default function Menu({ menu_name }) {
       </button>
       {isSelected && (
         <div>
-          {children.map((submenu_item) => {
-            <Submenu key={submenu_item} submenu_name={submenu_item} />;
-          })}
+          {children.map((submenu_item) => (
+            <Submenu key={submenu_item} submenu_name={submenu_item} />
+          ))}
         </div>
       )}
     </>
