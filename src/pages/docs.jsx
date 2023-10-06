@@ -9,14 +9,15 @@ export default function () {
 
   return (
     <div className="bg-bodyGradient w-screen h-screen">
-      <NavigationBar />
-      <h1 className="text-white">Docs</h1>
-      <GlobalProvider>
-        {Object.keys(parent).map((menu_item, index) => (
-          <Menu key={menu_item} menu_name={menu_item} />
-        ))}
-        <DocBody />
-      </GlobalProvider>
+      <Default>
+        <h1 className="text-white">Docs</h1>
+        <GlobalProvider>
+          {Object.keys(parent).map((menu_item, index) => (
+            <Menu key={menu_item} menu_name={menu_item} />
+          ))}
+          <DocBody />
+        </GlobalProvider>
+      </Default>
     </div>
   );
 }
