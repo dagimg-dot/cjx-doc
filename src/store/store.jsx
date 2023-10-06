@@ -9,6 +9,7 @@ const parent_submenu = [submenu_names, submenu_names2, submenu_names3];
 
 const initialState = {
   parent: {},
+  selectedSubMenu: "",
 };
 
 menu_names.map((menu_item) => {
@@ -31,11 +32,24 @@ export const GlobalContext = createContext(initialState);
 
 export const GlobalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(Reducer, initialState);
+
   const handleParentClick = (menu_name) => {
     dispatch({ type: "PARENT_CLICK", payload: menu_name });
   };
+
+  const handleChildClick = (submenu_name) => {
+    dispatch({ type: "CHILD_CLICK", payload: submenu_name });
+  };
+
   return (
-    <GlobalContext.Provider value={{ parent: state.parent, handleParentClick }}>
+    <GlobalContext.Provider
+      value={{
+        parent: state.parent,
+        selectedSubMenu: state.selectedSubMenu,
+        handleParentClick,
+        handleChildClick,
+      }}
+    >
       {children}
     </GlobalContext.Provider>
   );
