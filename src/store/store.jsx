@@ -1,4 +1,5 @@
 import { createContext, useReducer } from "react";
+import { ACTION_TYPE } from "../utils/types";
 import Reducer from "./Reducer";
 
 const menu_names = ["Parent 1", "Parent 2", "Parent 3"];
@@ -34,11 +35,11 @@ export const GlobalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(Reducer, initialState);
 
   const handleParentClick = (menu_name) => {
-    dispatch({ type: "PARENT_CLICK", payload: menu_name });
+    dispatch({ type: ACTION_TYPE.PARENT_CLICK, payload: menu_name });
   };
 
   const handleChildClick = (submenu_name) => {
-    dispatch({ type: "CHILD_CLICK", payload: submenu_name });
+    dispatch({ type: ACTION_TYPE.CHILD_CLICK, payload: submenu_name });
   };
 
   return (

@@ -1,3 +1,5 @@
+import { ACTION_TYPE } from "../utils/types";
+
 const findParent = (parent, submenu_name) => {
   let found = "";
   const parents = Object.keys(parent);
@@ -16,7 +18,7 @@ const findParent = (parent, submenu_name) => {
 
 const Reducer = (state, action) => {
   switch (action.type) {
-    case "PARENT_CLICK":
+    case ACTION_TYPE.PARENT_CLICK:
       const choosenParent = state.parent[action.payload];
       return {
         ...state,
@@ -29,7 +31,7 @@ const Reducer = (state, action) => {
         },
       };
 
-    case "CHILD_CLICK":
+    case ACTION_TYPE.CHILD_CLICK:
       const parent = findParent(state.parent, action.payload);
       const choosenChildState = state.parent[parent].children[action.payload];
       return {
