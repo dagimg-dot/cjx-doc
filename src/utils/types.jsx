@@ -1,0 +1,6 @@
+const ACTION_TYPE = {
+  PARENT_CLICK: "PARENT_CLICK",
+  CHILD_CLICK: "CHILD_CLICK",
+};
+
+export { ACTION_TYPE };
