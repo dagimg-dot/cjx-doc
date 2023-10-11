@@ -8,11 +8,11 @@ const LeftSidebar = () => {
   const parents = Object.keys(parent);
 
   return (
-    <>
+    <div className="border-r border-custom-white">
       {parents.map((menu_item) => (
         <Menu key={menu_item} menu_name={menu_item} />
       ))}
-    </>
+    </div>
   );
 };
 
