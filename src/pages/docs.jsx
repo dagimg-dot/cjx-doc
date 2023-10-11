@@ -9,8 +9,15 @@ export default function () {
       <Default>
         <h1 className="text-white">Docs</h1>
         <GlobalProvider>
-          <LeftSidebar />
-          <DocBody />
+          <div className="grid grid-cols-4 ">
+            <div className="flex flex-col">
+              <LeftSidebar />
+            </div>
+            <div className="flex flex-col border-r border-custom-white col-span-2">
+              <DocBody />
+            </div>
+            <div className="text-white">scroll over </div>
+          </div>
         </GlobalProvider>
       </Default>
     </div>
