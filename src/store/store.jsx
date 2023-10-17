@@ -31,6 +31,16 @@ const parent_submenu = [
   submenu_names3,
   submenu_names3,
 ];
+const submenu_subchild = ["Subchild1", "Subchild2", "Subchild3", "Subchild4"];
+const submenu_subchild2 = ["Subchild5", "Subchild6", "Subchild7", "Subchild8"];
+const submenu_subchild3 = ["Subchild1", "Subchild2", "Subchild3", "Subchild4"];
+const submenu_subchild4 = ["Subchild1", "Subchild2", "Subchild3", "Subchild4"];
+const parent_subchild = [
+  submenu_subchild,
+  submenu_subchild2,
+  submenu_subchild3,
+  submenu_subchild4,
+];
 
 const initialState = {
   parent: {},
@@ -48,10 +58,28 @@ parent_submenu.map((sub_menu, index) => {
   sub_menu.map((child) => {
     initialState.parent[Object.keys(initialState.parent)[index]].children = {
       ...initialState.parent[Object.keys(initialState.parent)[index]].children,
-      [child]: false,
+      [child]: { isSelected: false, sub_children: {} },
     };
   });
 });
+
+parent_submenu.map((sub_menu, index1) => {
+  sub_menu.map((child) => {
+    parent_subchild.map((sub_childrens) => {
+      initialState.parent[Object.keys(initialState.parent)[index1]].children[
+        [child]
+      ].sub_children = {
+        ...initialState.parent[Object.keys(initialState.parent)[index1]]
+          .children[[child]].sub_children,
+        [sub_childrens]: false,
+      };
+    });
+  });
+});
+console.log(
+  initialState.parent[Object.keys(initialState.parent)[0]].children[1]
+);
+console.log(initialState);
 
 export const GlobalContext = createContext(initialState);
 
