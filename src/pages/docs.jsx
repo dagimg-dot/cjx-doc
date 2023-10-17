@@ -9,7 +9,7 @@ export default function () {
       <Default>
         <GlobalProvider>
           <div className="grid grid-cols-4 ">
-            <div className="flex flex-col border-r border-custom-white items-center">
+            <div className="flex flex-col border-r border-custom-white items-center ">
               <LeftSidebar />
             </div>
             <div className="flex flex-col border-r border-custom-white col-span-2">
