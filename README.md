@@ -1,2 +1,3 @@
-# cjx-doc
-Documentation for CJX command line tool
+> # CJX CLI
+
+- This is documentation for CJX command line tool

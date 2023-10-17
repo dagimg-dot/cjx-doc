@@ -2,27 +2,35 @@ import { createContext, useReducer } from "react";
 import { ACTION_TYPE } from "../utils/types";
 import Reducer from "./Reducer";
 
-const menu_names = ["Parent 1", "Parent 2", "Parent 3", "Parent 4", "Parent 5"];
+// const menu_names = [
+//   "Parent 1",
+//   "Parent 2",
+//   "Parent 3",
+//   "Parent 4",
+//   "Parent 5",
+//   "Parent 6",
+//   "Parent 7",
+// ];
+
+const menu_names = [
+  "Getting started",
+  "Downloading CJX",
+  "Installation",
+  "Features",
+  "Updating CJX",
+  "Common problems",
+];
 const submenu_names = ["Child 1", "Child 2", "Child 3", "Child 4"];
 const submenu_names2 = ["Child 5", "Child 6", "Child 7", "Child 8"];
 const submenu_names3 = ["Child 9", "Child 10", "Child 11", "Child 12"];
-const submenu_names4 = ["Child 9", "Child 10", "Child 11", "Child 12"];
-const submenu_names5 = ["Child 9", "Child 10", "Child 11", "Child 12"];
 const parent_submenu = [
   submenu_names,
   submenu_names2,
   submenu_names3,
-  submenu_names4,
-  submenu_names5,
+  submenu_names3,
+  submenu_names3,
+  submenu_names3,
 ];
-const Submenu_child = ["subchild1", "subchild2", "subchild3", "subchild4"];
-const Submenu_child2 = ["subchild5", "subchild6", "subchild7", "subchild8"];
-const Submenu_child3 = ["subchild1", "subchild2", "subchild3", "subchild4"];
-const Submenu_child4 = ["subchild5", "subchild6", "subchild7", "subchild8"];
-const Submenu_child5 = ["subchild1", "subchild2", "subchild3", "subchild4"];
-const Submenu_child6 = ["subchild5", "subchild6", "subchild7", "subchild8"];
-const Submenu_child7 = ["subchild1", "subchild2", "subchild3", "subchild4"];
-const Submenu_child8 = ["subchild5", "subchild6", "subchild7", "subchild8"];
 
 const initialState = {
   parent: {},
@@ -32,7 +40,7 @@ const initialState = {
 menu_names.map((menu_item) => {
   initialState.parent = {
     ...initialState.parent,
-    [menu_item]: { isSelected: false, children: {} },
+    [menu_item]: { isSelected: true, children: {} },
   };
 });
 

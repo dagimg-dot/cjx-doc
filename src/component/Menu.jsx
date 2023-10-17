@@ -11,15 +11,15 @@ export default function Menu({ menu_name }) {
   return (
     <>
       <button
-        className="flex cursor-pointer gap-3 text-white items-center px-2 py-4"
+        className="flex cursor-pointer gap-3 text-white justify-between items-center py-4 pr-4"
         onClick={() => handleParentClick(menu_name)}
       >
         <div className="cursor-pointer">{menu_name}</div>
         <div>
           {isSelected ? (
             <svg
-              width={16}
-              height={16}
+              width={12}
+              height={12}
               fill="white"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
@@ -28,8 +28,8 @@ export default function Menu({ menu_name }) {
             </svg>
           ) : (
             <svg
-              width={16}
-              height={16}
+              width={12}
+              height={12}
               fill="white"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 320 512"
