@@ -2,8 +2,10 @@ import DocBody from "../component/DocBody";
 import { GlobalProvider } from "../store/store";
 import Default from "../layout/Default";
 import LeftSidebar from "../component/LeftSidebar";
+import RightSidebar from "../component/RightSidebar";
 
 export default function () {
+
   return (
     <div className="bg-bodyGradient h-screen relative">
       <Default>
@@ -16,7 +18,7 @@ export default function () {
               <DocBody />
             </div>
             <div className="text-white flex flex-col items-center">
-              scroll over
+              <RightSidebar/>
             </div>
           </div>
         </GlobalProvider>
