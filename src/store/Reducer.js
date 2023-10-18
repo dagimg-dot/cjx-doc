@@ -3,12 +3,12 @@ import { ACTION_TYPE } from "../utils/types";
 const findParent = (parent, submenu_name) => {
   let found = "";
   const parents = Object.keys(parent);
-
   parents.map((parent_item) => {
     if (parent[parent_item].isSelected) {
       const children = Object.keys(parent[parent_item].children);
       if (children.some((submenu_item) => submenu_item == submenu_name)) {
         found = parent_item;
+        console.log(found)
       }
     }
   });
@@ -33,19 +33,26 @@ const Reducer = (state, action) => {
 
     case ACTION_TYPE.CHILD_CLICK:
       const parent = findParent(state.parent, action.payload);
-      const choosenChildState = state.parent[parent].children[action.payload];
+      // console.log(state.parent[parent])
+
+      const choosenChild = state.parent[parent].children[action.payload];
+      console.log(choosenChild)
+
       return {
         parent: {
           ...state.parent,
           [parent]: {
             children: {
               ...state.parent[parent].children,
-              [action.payload]: !choosenChildState,
+              [choosenChild]: {
+                isSelected: !choosenChild.isSelected,
+                ...choosenChild.sub_children,
+              },
             },
             ...state.parent[parent],
           },
         },
-        selectedSubMenu: action.payload,
+        selectedSubMenu : choosenChild
       };
   }
 };
