@@ -44,7 +44,7 @@ const parent_subchild = [
 
 const initialState = {
   parent: {},
-  selectedSubMenu: "",
+  selectedSubMenu: null,
 };
 
 menu_names.map((menu_item) => {
@@ -58,50 +58,50 @@ parent_submenu.map((sub_menu, index) => {
   sub_menu.map((child) => {
     initialState.parent[Object.keys(initialState.parent)[index]].children = {
       ...initialState.parent[Object.keys(initialState.parent)[index]].children,
-      [child]: { isSelected: false, sub_children: {} },
+      [child]: { isSelected: true, sub_children: {} },
     };
   });
 });
 
+
 parent_submenu.map((sub_menu, index1) => {
   sub_menu.map((child) => {
     parent_subchild.map((sub_childrens) => {
-      initialState.parent[Object.keys(initialState.parent)[index1]].children[
-        [child]
-      ].sub_children = {
-        ...initialState.parent[Object.keys(initialState.parent)[index1]]
-          .children[[child]].sub_children,
-        [sub_childrens]: false,
-      };
+      sub_childrens.map((sub_child) => {
+        initialState.parent[Object.keys(initialState.parent)[index1]].children[
+          [child]
+        ].sub_children = {
+          ...initialState.parent[Object.keys(initialState.parent)[index1]]
+            .children[[child]].sub_children,
+          [sub_child]: false,
+        };
+      });
     });
   });
 });
-console.log(
-  initialState.parent[Object.keys(initialState.parent)[0]].children[1]
-);
-console.log(initialState);
+
 
 export const GlobalContext = createContext(initialState);
 
 export const GlobalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(Reducer, initialState);
-
+  
   const handleParentClick = (menu_name) => {
     dispatch({ type: ACTION_TYPE.PARENT_CLICK, payload: menu_name });
   };
-
+  
   const handleChildClick = (submenu_name) => {
     dispatch({ type: ACTION_TYPE.CHILD_CLICK, payload: submenu_name });
   };
-
+  
   return (
     <GlobalContext.Provider
-      value={{
-        parent: state.parent,
-        selectedSubMenu: state.selectedSubMenu,
-        handleParentClick,
-        handleChildClick,
-      }}
+    value={{
+      parent: state.parent,
+      selectedSubMenu: state.selectedSubMenu,
+      handleParentClick,
+      handleChildClick,
+    }}
     >
       {children}
     </GlobalContext.Provider>
