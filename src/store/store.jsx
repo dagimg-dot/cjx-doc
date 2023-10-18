@@ -44,7 +44,15 @@ const parent_subchild = [
 
 const initialState = {
   parent: {},
-  selectedSubMenu: null,
+  selectedSubMenu: {
+    isSelected:true,
+    sub_children : {
+        Subchild1 : false,
+        Subchld2 : false,
+        Subchild3 : false,
+        Subchild4 : false
+    }
+  },
 };
 
 menu_names.map((menu_item) => {
@@ -63,11 +71,10 @@ parent_submenu.map((sub_menu, index) => {
   });
 });
 
-
 parent_submenu.map((sub_menu, index1) => {
   sub_menu.map((child) => {
-    parent_subchild.map((sub_childrens) => {
-      sub_childrens.map((sub_child) => {
+    parent_subchild.map((sub_children) => {
+      sub_children.map((sub_child) => {
         initialState.parent[Object.keys(initialState.parent)[index1]].children[
           [child]
         ].sub_children = {
@@ -80,28 +87,27 @@ parent_submenu.map((sub_menu, index1) => {
   });
 });
 
-
 export const GlobalContext = createContext(initialState);
 
 export const GlobalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(Reducer, initialState);
-  
+
   const handleParentClick = (menu_name) => {
     dispatch({ type: ACTION_TYPE.PARENT_CLICK, payload: menu_name });
   };
-  
+
   const handleChildClick = (submenu_name) => {
     dispatch({ type: ACTION_TYPE.CHILD_CLICK, payload: submenu_name });
   };
-  
+
   return (
     <GlobalContext.Provider
-    value={{
-      parent: state.parent,
-      selectedSubMenu: state.selectedSubMenu,
-      handleParentClick,
-      handleChildClick,
-    }}
+      value={{
+        parent: state.parent,
+        selectedSubMenu: state.selectedSubMenu,
+        handleParentClick,
+        handleChildClick,
+      }}
     >
       {children}
     </GlobalContext.Provider>
