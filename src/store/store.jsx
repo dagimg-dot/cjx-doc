@@ -41,6 +41,12 @@ const parent_subchild = [
   submenu_subchild3,
   submenu_subchild4,
 ];
+const Child_Subchild = {
+  "Child 1" : submenu_subchild,
+  "Child 2" : submenu_subchild2,
+  "Child 3" : submenu_subchild3,
+  "Child 4" : submenu_subchild4
+}
 
 const initialState = {
   parent: {},
@@ -70,22 +76,37 @@ parent_submenu.map((sub_menu, index) => {
     };
   });
 });
-
-parent_submenu.map((sub_menu, index1) => {
-  sub_menu.map((child) => {
-    parent_subchild.map((sub_children) => {
-      sub_children.map((sub_child) => {
-        initialState.parent[Object.keys(initialState.parent)[index1]].children[
-          [child]
-        ].sub_children = {
-          ...initialState.parent[Object.keys(initialState.parent)[index1]]
-            .children[[child]].sub_children,
-          [sub_child]: false,
-        };
-      });
-    });
-  });
-});
+parent_submenu.map((submenu,index) => {
+  submenu.map((child) => {
+    Object.keys(Child_Subchild).find((item)=>{
+      if (item ==child) {
+        console.log(item)
+        Child_Subchild[item].map((sub_children) => {
+          console.log(sub_children)
+          initialState.parent[Object.keys(initialState.parent)[index]].children[item].sub_children = {
+            ...initialState.parent[Object.keys(initialState.parent)[index]].children[item].sub_children,
+            [sub_children] : false
+          }
+          })
+      }
+      })
+    })
+})
+// parent_submenu.map((sub_menu, index1) => {
+//   sub_menu.map((child) => {
+//     parent_subchild.map((sub_children) => {
+//       sub_children.map((sub_child) => {
+//         initialState.parent[Object.keys(initialState.parent)[index1]].children[
+//           [child]
+//         ].sub_children = {
+//           ...initialState.parent[Object.keys(initialState.parent)[index1]]
+//             .children[[child]].sub_children,
+//           [sub_child]: false,
+//         };
+//       });
+//     });
+//   });
+// });
 
 export const GlobalContext = createContext(initialState);
 
