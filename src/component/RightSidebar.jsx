@@ -8,7 +8,7 @@ const RightSidebar = () => {
   return (
     <>
       {Object.keys(selectedSubMenu.sub_children).map((sub_child) => (
-        <p key={sub_child}>{sub_child}</p>
+        <p className="py-2" key={sub_child}>{sub_child}</p>
       ))}
     </>
   );
