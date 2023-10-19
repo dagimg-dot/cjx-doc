@@ -6,11 +6,11 @@ const RightSidebar = () => {
   console.log(selectedSubMenu)
   
   return (
-    <>
+    <div className = "mx-10">
       {Object.keys(selectedSubMenu.sub_children).map((sub_child) => (
-        <p className="py-2" key={sub_child}>{sub_child}</p>
+        <p className="my-2 px-2 border-l border-custom-pink" key={sub_child}>{sub_child}</p>
       ))}
-    </>
+    </div>
   );
 };
 
