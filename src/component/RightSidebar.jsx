@@ -1,5 +1,5 @@
 import { GlobalContext } from "../store/store";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 
 const RightSidebar = () => {
   const { selectedSubMenu } = useContext(GlobalContext);
