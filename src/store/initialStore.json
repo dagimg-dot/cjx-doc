@@ -2,11 +2,11 @@
     "parent": {
         "Getting Started": {
             "name": "Getting Started",
-            "isSelected": false,
+            "isSelected": true,
             "children": {
                 "Child 1": {
                     "name": "Child 1",
-                    "isSelected": false,
+                    "isSelected": true,
                     "sub_children": {
                         "Subchild 1": {
                             "name": "Subchild 1",
@@ -567,7 +567,7 @@
     },
     "selectedSubMenu": {
         "name": "Child 1",
-        "isSelected": false,
+        "isSelected": true,
         "sub_children": {
             "Subchild 1": {
                 "name": "Subchild 1",
