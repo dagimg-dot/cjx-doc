@@ -13,5 +13,5 @@ export default function Socials(props) {
         <FaInstagram className="scale-150 text-header-white" />
       </a>
     </div>
-  );
+  ); 
 }
