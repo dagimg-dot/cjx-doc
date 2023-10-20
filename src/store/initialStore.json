@@ -1,0 +1,87 @@
+{
+    "parent": {
+        "Getting Started": {
+            "name": "Getting Started",
+            "isSelected": false,
+            "children": {
+                "Child 1": {
+                    "name": "Child 1",
+                    "isSelected": false,
+                    "sub_children": {
+                        "Subchild 1": {
+                            "name": "Subchild 1",
+                            "isFocused": false
+                        },
+                        "Subchild 2": {
+                            "name": "Subchild 2",
+                            "isFocused": false
+                        }
+                    }
+                },
+                "Child 2": {
+                    "name": "Child 2",
+                    "isSelected": false,
+                    "sub_children": {
+                        "Subchild 1": {
+                            "name": "Subchild 1",
+                            "isFocused": false
+                        },
+                        "Subchild 2": {
+                            "name": "Subchild 2",
+                            "isFocused": false
+                        }
+                    }
+                }
+            }
+        },
+        "Downloading CJX": {
+            "name": "Downloading CJX",
+            "isSelected": false,
+            "children": {
+                "Child 1": {
+                    "name": "Child 1",
+                    "isSelected": false,
+                    "sub_children": {
+                        "Subchild 1": {
+                            "name": "Subchild 1",
+                            "isFocused": false
+                        },
+                        "Subchild 2": {
+                            "name": "Subchild 2",
+                            "isFocused": false
+                        }
+                    }
+                },
+                "Child 2": {
+                    "name": "Child 2",
+                    "isSelected": false,
+                    "sub_children": {
+                        "Subchild 3": {
+                            "name": "Subchild 1",
+                            "isFocused": false
+                        },
+                        "Subchild 4": {
+                            "name": "Subchild 2",
+                            "isFocused": false
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "selectedSubMenu": {
+        "name": "Child 1",
+        "isSelected": false,
+        "sub_children": {
+            "Subchild 1": {
+                "name": "Subchild 1",
+                "isFocused": false
+            },
+            "Subchild 2": {
+                "name": "Subchild 2",
+                "isFocused": false
+            }
+        }
+    }
+
+}
