@@ -4,585 +4,166 @@
             "name": "Getting Started",
             "isSelected": true,
             "children": {
-                "Child 1": {
-                    "name": "Child 1",
+                "Prerequisites": {
+                    "name": "Prerequisites",
                     "isSelected": true,
                     "sub_children": {
-                        "Subchild 1": {
-                            "name": "Subchild 1",
+                        "Other Programs": {
+                            "name": "Other Programs",
                             "isFocused": false
                         },
-                        "Subchild 2": {
-                            "name": "Subchild 2",
-                            "isFocused": false
-                        },
-                        "Subchild 3": {
-                            "name": "Subchild 3",
-                            "isFocused": false
-                        },
-                        "Subchild 4": {
-                            "name": "Subchild 4",
+                        "Downloading CJX CLI": {
+                            "name": "Downloading CJX CLI",
                             "isFocused": false
                         }
                     }
                 },
-                "Child 2": {
-                    "name": "Child 2",
+                "Setting Up the Environment": {
+                    "name": "Setting Up the Environment",
                     "isSelected": false,
                     "sub_children": {
-                        "Subchild 1": {
-                            "name": "Subchild 1",
+                        "Initializing CJX": {
+                            "name": "Initializing CJX",
                             "isFocused": false
                         },
-                        "Subchild 2": {
-                            "name": "Subchild 2",
+                        "Specifying JavaFX SDK Path": {
+                            "name": "Specifying JavaFX SDK Path",
                             "isFocused": false
                         },
-                        "Subchild 3": {
-                            "name": "Subchild 3",
-                            "isFocused": false
-                        },
-                        "Subchild 4": {
-                            "name": "Subchild 4",
+                        "Adding CJX CLI to environment variables": {
+                            "name": "Adding CJX CLI to environment variables",
                             "isFocused": false
                         }
                     }
                 },
-                "Child 3": {
-                    "name": "Child 3",
+                "Verifying Setup": {
+                    "name": "Verifying Setup",
+                    "isSelected": false,
+                    "sub_children": {}
+                }
+            }
+        },
+        "Working with Projects": {
+            "name": "Working with Projects",
+            "isSelected": false,
+            "children": {
+                "New Project": {
+                    "name": "New Project",
                     "isSelected": false,
                     "sub_children": {
-                        "Subchild 1": {
-                            "name": "Subchild 1",
+                        "Simple JavaFX Project": {
+                            "name": "Simple JavaFX Project",
                             "isFocused": false
                         },
-                        "Subchild 2": {
-                            "name": "Subchild 2",
-                            "isFocused": false
-                        },
-                        "Subchild 3": {
-                            "name": "Subchild 3",
-                            "isFocused": false
-                        },
-                        "Subchild 4": {
-                            "name": "Subchild 4",
+                        "Advanced FXML Project": {
+                            "name": "Advanced FXML Project",
                             "isFocused": false
                         }
                     }
                 },
-                "Child 4": {
-                    "name": "Child 4",
+                "Cloning Projects": {
+                    "name": "Cloning Projects",
+                    "isSelected": false,
+                    "sub_children": {}
+                }
+            }
+        },
+        "CLI Commands": {
+            "name": "Downloading CLI Commands",
+            "isSelected": false,
+            "children": {
+                "Command Reference": {
+                    "name": "Command Reference",
                     "isSelected": false,
                     "sub_children": {
-                        "Subchild 1": {
-                            "name": "Subchild 1",
+                        "cjx init": {
+                            "name": "cjx init",
                             "isFocused": false
                         },
-                        "Subchild 2": {
-                            "name": "Subchild 2",
+                        "cjx setup": {
+                            "name": "cjx setup",
                             "isFocused": false
                         },
-                        "Subchild 3": {
-                            "name": "Subchild 3",
+                        "cjx create": {
+                            "name": "cjx create",
                             "isFocused": false
                         },
-                        "Subchild 4": {
-                            "name": "Subchild 4",
+                        "cjx clone": {
+                            "name": "cjx clone",
+                            "isFocused": false
+                        },
+                        "cjx doctor": {
+                            "name": "cjx doctor",
                             "isFocused": false
                         }
                     }
                 }
             }
         },
-        "Downloading CJX": {
-            "name": "Downloading CJX",
+        "Updating CJX CLI": {
+            "name": "Updating CJX CLI",
             "isSelected": false,
             "children": {
-                "Child 1": {
-                    "name": "Child 1",
+                "The Updating Process": {
+                    "name": "The Updating Process",
                     "isSelected": false,
                     "sub_children": {
-                        "Subchild 1": {
-                            "name": "Subchild 1",
+                        "Checking for updates": {
+                            "name": "Checking for updates",
                             "isFocused": false
                         },
-                        "Subchild 2": {
-                            "name": "Subchild 2",
+                        "Updating CJX": {
+                            "name": "Updating CJX",
                             "isFocused": false
                         },
-                        "Subchild 3": {
-                            "name": "Subchild 3",
-                            "isFocused": false
-                        },
-                        "Subchild 4": {
-                            "name": "Subchild 4",
-                            "isFocused": false
-                        }
-                    }
-                },
-                "Child 2": {
-                    "name": "Child 2",
-                    "isSelected": false,
-                    "sub_children": {
-                        "Subchild 1": {
-                            "name": "Subchild 1",
-                            "isFocused": false
-                        },
-                        "Subchild 2": {
-                            "name": "Subchild 2",
-                            "isFocused": false
-                        },
-                        "Subchild 3": {
-                            "name": "Subchild 3",
-                            "isFocused": false
-                        },
-                        "Subchild 4": {
-                            "name": "Subchild 4",
-                            "isFocused": false
-                        }
-                    }
-                },
-                "Child 3": {
-                    "name": "Child 3",
-                    "isSelected": false,
-                    "sub_children": {
-                        "Subchild 1": {
-                            "name": "Subchild 1",
-                            "isFocused": false
-                        },
-                        "Subchild 2": {
-                            "name": "Subchild 2",
-                            "isFocused": false
-                        },
-                        "Subchild 3": {
-                            "name": "Subchild 3",
-                            "isFocused": false
-                        },
-                        "Subchild 4": {
-                            "name": "Subchild 4",
-                            "isFocused": false
-                        }
-                    }
-                },
-                "Child 4": {
-                    "name": "Child 4",
-                    "isSelected": false,
-                    "sub_children": {
-                        "Subchild 1": {
-                            "name": "Subchild 1",
-                            "isFocused": false
-                        },
-                        "Subchild 2": {
-                            "name": "Subchild 2",
-                            "isFocused": false
-                        },
-                        "Subchild 3": {
-                            "name": "Subchild 3",
-                            "isFocused": false
-                        },
-                        "Subchild 4": {
-                            "name": "Subchild 4",
+                        "Verifying CLI Version": {
+                            "name": "Verifying CLI Version",
                             "isFocused": false
                         }
                     }
                 }
             }
         },
-        "Installation": {
-            "name": "Downloading CJX",
+        "Troublshooting": {
+            "name": "Troublshooting",
             "isSelected": false,
             "children": {
-                "Child 1": {
-                    "name": "Child 1",
+                "Common Problems": {
+                    "name": "Common Problems",
                     "isSelected": false,
                     "sub_children": {
-                        "Subchild 1": {
-                            "name": "Subchild 1",
+                        "cjx is not recognized": {
+                            "name": "cjx is not recognized",
                             "isFocused": false
                         },
-                        "Subchild 2": {
-                            "name": "Subchild 2",
+                        "cjx sdk path is not set": {
+                            "name": "cjx sdk path is not set",
                             "isFocused": false
                         },
-                        "Subchild 3": {
-                            "name": "Subchild 3",
-                            "isFocused": false
-                        },
-                        "Subchild 4": {
-                            "name": "Subchild 4",
+                        "For other errors": {
+                            "name": "For other errors",
                             "isFocused": false
                         }
                     }
                 },
-                "Child 2": {
-                    "name": "Child 2",
+                "FAQs": {
+                    "name": "FAQs",
                     "isSelected": false,
-                    "sub_children": {
-                        "Subchild 1": {
-                            "name": "Subchild 1",
-                            "isFocused": false
-                        },
-                        "Subchild 2": {
-                            "name": "Subchild 2",
-                            "isFocused": false
-                        },
-                        "Subchild 3": {
-                            "name": "Subchild 3",
-                            "isFocused": false
-                        },
-                        "Subchild 4": {
-                            "name": "Subchild 4",
-                            "isFocused": false
-                        }
-                    }
-                },
-                "Child 3": {
-                    "name": "Child 3",
-                    "isSelected": false,
-                    "sub_children": {
-                        "Subchild 1": {
-                            "name": "Subchild 1",
-                            "isFocused": false
-                        },
-                        "Subchild 2": {
-                            "name": "Subchild 2",
-                            "isFocused": false
-                        },
-                        "Subchild 3": {
-                            "name": "Subchild 3",
-                            "isFocused": false
-                        },
-                        "Subchild 4": {
-                            "name": "Subchild 4",
-                            "isFocused": false
-                        }
-                    }
-                },
-                "Child 4": {
-                    "name": "Child 4",
-                    "isSelected": false,
-                    "sub_children": {
-                        "Subchild 1": {
-                            "name": "Subchild 1",
-                            "isFocused": false
-                        },
-                        "Subchild 2": {
-                            "name": "Subchild 2",
-                            "isFocused": false
-                        },
-                        "Subchild 3": {
-                            "name": "Subchild 3",
-                            "isFocused": false
-                        },
-                        "Subchild 4": {
-                            "name": "Subchild 4",
-                            "isFocused": false
-                        }
-                    }
-                }
-            }
-        },
-        "Features": {
-            "name": "Downloading CJX",
-            "isSelected": false,
-            "children": {
-                "Child 1": {
-                    "name": "Child 1",
-                    "isSelected": false,
-                    "sub_children": {
-                        "Subchild 1": {
-                            "name": "Subchild 1",
-                            "isFocused": false
-                        },
-                        "Subchild 2": {
-                            "name": "Subchild 2",
-                            "isFocused": false
-                        },
-                        "Subchild 3": {
-                            "name": "Subchild 3",
-                            "isFocused": false
-                        },
-                        "Subchild 4": {
-                            "name": "Subchild 4",
-                            "isFocused": false
-                        }
-                    }
-                },
-                "Child 2": {
-                    "name": "Child 2",
-                    "isSelected": false,
-                    "sub_children": {
-                        "Subchild 1": {
-                            "name": "Subchild 1",
-                            "isFocused": false
-                        },
-                        "Subchild 2": {
-                            "name": "Subchild 2",
-                            "isFocused": false
-                        },
-                        "Subchild 3": {
-                            "name": "Subchild 3",
-                            "isFocused": false
-                        },
-                        "Subchild 4": {
-                            "name": "Subchild 4",
-                            "isFocused": false
-                        }
-                    }
-                },
-                "Child 3": {
-                    "name": "Child 3",
-                    "isSelected": false,
-                    "sub_children": {
-                        "Subchild 1": {
-                            "name": "Subchild 1",
-                            "isFocused": false
-                        },
-                        "Subchild 2": {
-                            "name": "Subchild 2",
-                            "isFocused": false
-                        },
-                        "Subchild 3": {
-                            "name": "Subchild 3",
-                            "isFocused": false
-                        },
-                        "Subchild 4": {
-                            "name": "Subchild 4",
-                            "isFocused": false
-                        }
-                    }
-                },
-                "Child 4": {
-                    "name": "Child 4",
-                    "isSelected": false,
-                    "sub_children": {
-                        "Subchild 1": {
-                            "name": "Subchild 1",
-                            "isFocused": false
-                        },
-                        "Subchild 2": {
-                            "name": "Subchild 2",
-                            "isFocused": false
-                        },
-                        "Subchild 3": {
-                            "name": "Subchild 3",
-                            "isFocused": false
-                        },
-                        "Subchild 4": {
-                            "name": "Subchild 4",
-                            "isFocused": false
-                        }
-                    }
-                }
-            }
-        },
-        "Updating CJX": {
-            "name": "Downloading CJX",
-            "isSelected": false,
-            "children": {
-                "Child 1": {
-                    "name": "Child 1",
-                    "isSelected": false,
-                    "sub_children": {
-                        "Subchild 1": {
-                            "name": "Subchild 1",
-                            "isFocused": false
-                        },
-                        "Subchild 2": {
-                            "name": "Subchild 2",
-                            "isFocused": false
-                        },
-                        "Subchild 3": {
-                            "name": "Subchild 3",
-                            "isFocused": false
-                        },
-                        "Subchild 4": {
-                            "name": "Subchild 4",
-                            "isFocused": false
-                        }
-                    }
-                },
-                "Child 2": {
-                    "name": "Child 2",
-                    "isSelected": false,
-                    "sub_children": {
-                        "Subchild 1": {
-                            "name": "Subchild 1",
-                            "isFocused": false
-                        },
-                        "Subchild 2": {
-                            "name": "Subchild 2",
-                            "isFocused": false
-                        },
-                        "Subchild 3": {
-                            "name": "Subchild 3",
-                            "isFocused": false
-                        },
-                        "Subchild 4": {
-                            "name": "Subchild 4",
-                            "isFocused": false
-                        }
-                    }
-                },
-                "Child 3": {
-                    "name": "Child 3",
-                    "isSelected": false,
-                    "sub_children": {
-                        "Subchild 1": {
-                            "name": "Subchild 1",
-                            "isFocused": false
-                        },
-                        "Subchild 2": {
-                            "name": "Subchild 2",
-                            "isFocused": false
-                        },
-                        "Subchild 3": {
-                            "name": "Subchild 3",
-                            "isFocused": false
-                        },
-                        "Subchild 4": {
-                            "name": "Subchild 4",
-                            "isFocused": false
-                        }
-                    }
-                },
-                "Child 4": {
-                    "name": "Child 4",
-                    "isSelected": false,
-                    "sub_children": {
-                        "Subchild 1": {
-                            "name": "Subchild 1",
-                            "isFocused": false
-                        },
-                        "Subchild 2": {
-                            "name": "Subchild 2",
-                            "isFocused": false
-                        },
-                        "Subchild 3": {
-                            "name": "Subchild 3",
-                            "isFocused": false
-                        },
-                        "Subchild 4": {
-                            "name": "Subchild 4",
-                            "isFocused": false
-                        }
-                    }
-                }
-            }
-        },
-        "Common Problems": {
-            "name": "Downloading CJX",
-            "isSelected": false,
-            "children": {
-                "Child 1": {
-                    "name": "Child 1",
-                    "isSelected": false,
-                    "sub_children": {
-                        "Subchild 1": {
-                            "name": "Subchild 1",
-                            "isFocused": false
-                        },
-                        "Subchild 2": {
-                            "name": "Subchild 2",
-                            "isFocused": false
-                        },
-                        "Subchild 3": {
-                            "name": "Subchild 3",
-                            "isFocused": false
-                        },
-                        "Subchild 4": {
-                            "name": "Subchild 4",
-                            "isFocused": false
-                        }
-                    }
-                },
-                "Child 2": {
-                    "name": "Child 2",
-                    "isSelected": false,
-                    "sub_children": {
-                        "Subchild 1": {
-                            "name": "Subchild 1",
-                            "isFocused": false
-                        },
-                        "Subchild 2": {
-                            "name": "Subchild 2",
-                            "isFocused": false
-                        },
-                        "Subchild 3": {
-                            "name": "Subchild 3",
-                            "isFocused": false
-                        },
-                        "Subchild 4": {
-                            "name": "Subchild 4",
-                            "isFocused": false
-                        }
-                    }
-                },
-                "Child 3": {
-                    "name": "Child 3",
-                    "isSelected": false,
-                    "sub_children": {
-                        "Subchild 1": {
-                            "name": "Subchild 1",
-                            "isFocused": false
-                        },
-                        "Subchild 2": {
-                            "name": "Subchild 2",
-                            "isFocused": false
-                        },
-                        "Subchild 3": {
-                            "name": "Subchild 3",
-                            "isFocused": false
-                        },
-                        "Subchild 4": {
-                            "name": "Subchild 4",
-                            "isFocused": false
-                        }
-                    }
-                },
-                "Child 4": {
-                    "name": "Child 4",
-                    "isSelected": false,
-                    "sub_children": {
-                        "Subchild 1": {
-                            "name": "Subchild 1",
-                            "isFocused": false
-                        },
-                        "Subchild 2": {
-                            "name": "Subchild 2",
-                            "isFocused": false
-                        },
-                        "Subchild 3": {
-                            "name": "Subchild 3",
-                            "isFocused": false
-                        },
-                        "Subchild 4": {
-                            "name": "Subchild 4",
-                            "isFocused": false
-                        }
-                    }
+                    "sub_children": {}
                 }
             }
         }
     },
     "selectedSubMenu": {
-        "name": "Child 1",
+        "name": "Prerequisites",
         "isSelected": true,
         "sub_children": {
-            "Subchild 1": {
-                "name": "Subchild 1",
-                "isFocused": false
+            "Other Programs": {
+                "name": "Other Programs",
+                "isFocused": true
             },
-            "Subchild 2": {
-                "name": "Subchild 2",
-                "isFocused": false
-            },
-            "Subchild 3": {
-                "name": "Subchild 3",
-                "isFocused": false
-            },
-            "Subchild 4": {
-                "name": "Subchild 4",
+            "Downloading CJX CLI": {
+                "name": "Downloading CJX CLI",
                 "isFocused": false
             }
         }
