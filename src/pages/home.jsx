@@ -1,4 +1,4 @@
-import CjxBody from "../component/cjxBody";
+import Body from "../component/Body";
 import MoreInfo from "../component/MoreInfo";
 import Default from "../layout/Default";
 
@@ -7,7 +7,7 @@ export default function () {
     <div className="bg-bodyGradient">
       <div className="h-screen">
         <Default>
-          <CjxBody />
+          <Body />
         </Default>
       </div>
       <div className="h-screen">

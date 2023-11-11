@@ -1,7 +1,7 @@
 import { GlobalContext } from "../store/store";
 import { useContext } from "react";
 
-const RightSidebar = () => {
+export default function RightSidebar() {
   const { selectedSubMenu } = useContext(GlobalContext);
   const subChildren = Object.keys(selectedSubMenu.sub_children);
 
@@ -22,6 +22,4 @@ const RightSidebar = () => {
       )}
     </div>
   );
-};
-
-export default RightSidebar;
+}
