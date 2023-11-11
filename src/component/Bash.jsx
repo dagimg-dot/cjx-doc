@@ -1,7 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
-import { useEffect } from "react";
-import { useState } from "react";
+import useAnimation from "../hooks/useAnimation";
 
 export default function Bash() {
   const bashCommands = [
@@ -11,40 +10,8 @@ export default function Bash() {
     "cjx clone <Project url>",
     "cjx doctor",
   ];
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [currentCharacterIndex, setCurrentCharacterIndex] = useState(0);
-  const [displayedCommand, setDisplayedCommand] = useState("");
 
-  useEffect(() => {
-    const command = bashCommands[currentIndex];
-    let typingTimer;
-
-    const startTyping = () => {
-      typingTimer = setInterval(() => {
-        if (currentCharacterIndex < command.length) {
-          setDisplayedCommand(
-            (prevCommand) => prevCommand + command[currentCharacterIndex]
-          );
-          setCurrentCharacterIndex((prevIndex) => prevIndex + 1);
-        } else {
-          clearInterval(typingTimer);
-          setTimeout(() => {
-            setDisplayedCommand("");
-            setCurrentIndex(
-              (prevIndex) => (prevIndex + 1) % bashCommands.length
-            );
-            setCurrentCharacterIndex(0);
-          }, 2000);
-        }
-      }, 100);
-    };
-
-    startTyping();
-
-    return () => {
-      clearInterval(typingTimer);
-    };
-  }, [bashCommands, currentIndex]);
+  const displayedCommand = useAnimation(bashCommands);
 
   return (
     <div className="flex flex-col bg-black w-[350px] h-[250px] font-consolas text-bash-white mt-18 mr-60 border border-custom-white rounded-lg">
