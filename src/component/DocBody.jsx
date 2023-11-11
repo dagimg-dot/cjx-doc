@@ -1,9 +1,11 @@
 import { GlobalContext } from "../store/store";
 import { useContext } from "react";
+import DocPages from "../utils/docPages";
 
 const DocBody = () => {
   const { selectedSubMenu } = useContext(GlobalContext);
-  return <div className="text-white text-[20px]">{selectedSubMenu.name}</div>;
+
+  return DocPages[selectedSubMenu.name];
 };
 
 export default DocBody;
