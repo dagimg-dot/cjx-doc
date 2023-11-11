@@ -10,11 +10,11 @@ export default function () {
     <div className="bg-bodyGradient h-screen relative">
       <Default>
         <GlobalProvider>
-          <div className="grid grid-cols-6 h-full w-full absolute pt-28 px-28">
+          <div className="grid grid-cols-6 h-full w-full absolute pt-28 px-4">
             <div className="flex flex-col border-r border-custom-white overflow-y-auto">
               <LeftSidebar />
             </div>
-            <div className="flex flex-col border-r border-custom-white col-span-4">
+            <div className="flex flex-col border-r border-custom-white col-span-4 mx-8">
               <DocBody />
             </div>
             <div className="text-white flex flex-col items-center">
