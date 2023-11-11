@@ -17,7 +17,7 @@ export default function () {
             <div className="flex flex-col border-r border-custom-white col-span-4 mx-8">
               <DocBody />
             </div>
-            <div className="text-white flex flex-col items-center">
+            <div className="text-white flex flex-col">
               <RightSidebar/>
             </div>
           </div>
