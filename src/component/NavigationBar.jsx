@@ -6,7 +6,7 @@ import "../css/NavigationBarHover.css";
 
 export default function NavigationBar() {
   return (
-    <div className="flex justify-between px-28 py-4 bg-header-black text-white font-sans z-50 absolute w-full">
+    <div className="flex justify-between px-28 py-4 bg-header-black text-white font-sans z-50 absolute w-full font-bold">
       <div>
         <li className="list-none ">
           <Link to="/">
