@@ -1,4 +1,4 @@
-import Body from "../component/Body";
+import Hero from "../component/Hero";
 import MoreInfo from "../component/MoreInfo";
 import Default from "../layout/Default";
 
@@ -7,7 +7,7 @@ export default function () {
     <div className="bg-bodyGradient">
       <div className="h-screen">
         <Default>
-          <Body />
+          <Hero />
         </Default>
       </div>
       <div className="h-screen">
