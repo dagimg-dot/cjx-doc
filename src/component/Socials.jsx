@@ -1,6 +1,6 @@
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
-export default function Socials({gh, li, ig}) {
+export default function Socials({ gh, li, ig }) {
   return (
     <div className="flex gap-8">
       <a href={gh} target="_blank">
@@ -13,5 +13,5 @@ export default function Socials({gh, li, ig}) {
         <FaInstagram className="scale-150 text-header-white" />
       </a>
     </div>
-  ); 
+  );
 }
