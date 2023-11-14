@@ -1,9 +1,9 @@
 const features = [
-  "create project easily",
-  "create project easily",
-  "create project easily",
-  "create project easily",
-  "create project easily",
+  "initialize a JavaFx project easily",
+  "faster development",
+  "git integration out of the box",
+  "easy installaion",
+  "and many more . . . ",
 ];
 
 const prerequisiteLinks = {
