@@ -11,7 +11,7 @@ export default function Menu({ menu_name }) {
   return (
     <>
       <button
-        className="flex cursor-pointer gap-3 text-white justify-between items-center py-4 pr-2"
+        className="flex cursor-pointer gap-3 text-white justify-between items-center py-4 pr-6"
         onClick={() => handleParentClick(menu_name)}
       >
         <div className="cursor-pointer ">{menu_name}</div>
@@ -40,7 +40,7 @@ export default function Menu({ menu_name }) {
         </div>
       </button>
       {isSelected && (
-        <div className="pl-4">
+        <div className="pl-4 flex flex-col gap-3 items-start">
           {children.map((submenu_item) => (
             <Submenu key={submenu_item} submenu_name={submenu_item} />
           ))}
