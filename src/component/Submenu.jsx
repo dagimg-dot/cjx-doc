@@ -2,12 +2,11 @@ import { useContext } from "react";
 import { GlobalContext } from "../store/store";
 
 export default function Submenu({ submenu_name }) {
-  const { selectedSubMenu, handleChildClick } = useContext(GlobalContext);
-  const selectedColor = submenu_name === selectedSubMenu.name ? "border-l-2 pl-2 text-[#bcbcbc] border-[#bcbcbc]" : ""
+  const { handleChildClick } = useContext(GlobalContext);
 
   return (
     <button
-      className={`text-white cursor-pointer block ${selectedColor}`}
+      className="text-white cursor-pointer block"
       onClick={() => handleChildClick(submenu_name)}
     >
       {submenu_name}
