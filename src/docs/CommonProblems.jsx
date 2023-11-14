@@ -5,14 +5,14 @@ import Terminal from "../layout/Terminal";
 
 const CommonProblems = () => {
   return (
-    <div>
+    <div className="mb-4 mr-8">
       <MainHeading>1. Common Problems</MainHeading>
-      <SecondaryHeading>1. CJX is not recognized</SecondaryHeading>
-      <p>
+      <SecondaryHeading>1. cjx is not recognized</SecondaryHeading>
+      <p className="mb-3">
         This is mainly due to the missing of <code>cjx</code> in the environment
         variables. This happens because cjx is still not available globally.
       </p>
-      <p>
+      <p className="mb-3">
         To fix this issue you can add the cjx directory to the environment
         variables.
       </p>

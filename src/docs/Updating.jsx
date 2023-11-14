@@ -7,13 +7,15 @@ const Updating = () => {
   return (
     <div className="mb-4 mr-8">
       <MainHeading>The Updating Process</MainHeading>
-      <p>
-        Step 1: First of all you need to navigate to the extracted folder of CJX
-        that you downloaded at the start.
-      </p>
-      <p>Step 2: Go to the cjxupdate folder</p>
-      <p>Step 3: Open you terminal here.</p>
-      <p>Step 4: Now you can run the following commands.</p>
+      <div className="flex flex-col gap-3">
+          <p>
+            Step 1: First of all you need to navigate to the extracted folder of CJX
+            that you downloaded at the start.
+          </p>
+          <p>Step 2: Go to the cjxupdate folder</p>
+          <p>Step 3: Open you terminal here.</p>
+          <p>Step 4: Now you can run the following commands.</p>
+      </div>
       <SecondaryHeading>1. Checking for Updates</SecondaryHeading>
       <p>
         Maintain your CJX CLI with the latest features and improvements. Use{" "}

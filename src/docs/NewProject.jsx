@@ -9,10 +9,10 @@ const NewProject = () => {
     <div className="mb-4 mr-8">
       <MainHeading>1. New Project</MainHeading>
       <SecondaryHeading>1. Simple JavaFX Project</SecondaryHeading>
-      <p>
-        The word 'Simple' refers a straightforward JavaFX project. This means
-        the project only contains <code>.java</code> files and you are about to
-        hard code all the views using java only 😁.
+      <p className="mb-3">
+        The word <code>Simple</code> refers a straightforward JavaFX project.
+        This means the project only contains <code>.java</code> files and you
+        are about to hard code all the views using java only 😁.
       </p>
       <p>
         To create simple project, you can use the{" "}
@@ -22,7 +22,7 @@ const NewProject = () => {
         <p>cjx create simple project-name</p>
       </Terminal>
       <SecondaryHeading>2. Advanced FXML Project</SecondaryHeading>
-      <p>
+      <p className="mb-3">
         This kind of project is a more advanced one and it contains{" "}
         <code>.fxml</code>
         files which are essentially for creating the view of JavaFX projects.

@@ -6,7 +6,7 @@ const CloneProjects = () => {
   return (
     <div className="mb-4 mr-8">
       <MainHeading>2. Cloning Projects</MainHeading>
-      <p>
+      <p className="mb-3">
         CJX lets you collaborate or work on existing JavaFX projects by letting
         you clone them from a Git repository.
       </p>
