@@ -6,5 +6,5 @@ export default function DocBody() {
   const { selectedSubMenu } = useContext(GlobalContext);
   const currentDoc = DocPages[selectedSubMenu.name];
 
-  return currentDoc;
+  return <div className="leading-6">{currentDoc}</div>;
 }
