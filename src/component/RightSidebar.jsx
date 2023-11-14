@@ -20,9 +20,9 @@ export default function RightSidebar() {
             </p>
           ))}
         </div>
-      ):
-      <p className="">No Sub topics for this page</p>
-      }
+      ) : (
+        <p className="">No Sub topics for this page</p>
+      )}
     </div>
   );
 }
