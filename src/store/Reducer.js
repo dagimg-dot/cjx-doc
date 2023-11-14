@@ -8,7 +8,6 @@ const findParent = (parent, submenu_name) => {
       const children = Object.keys(parent[parent_item].children);
       if (children.some((submenu_item) => submenu_item == submenu_name)) {
         found = parent_item;
-        console.log(found)
       }
     }
   });
@@ -33,10 +32,8 @@ const Reducer = (state, action) => {
 
     case ACTION_TYPE.CHILD_CLICK:
       const parent = findParent(state.parent, action.payload);
-      // console.log(state.parent[parent])
 
       const choosenChild = state.parent[parent].children[action.payload];
-      console.log(choosenChild)
 
       return {
         parent: {
