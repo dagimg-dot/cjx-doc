@@ -8,7 +8,7 @@ const Prerequisites = () => {
   const linkName = Object.keys(prerequisiteLinks);
 
   return (
-    <div>
+    <div className="mb-4 mr-8">
       <MainHeading>1. Prerequisites</MainHeading>
       <SecondaryHeading>1. Other Programs</SecondaryHeading>
       <p className="mb-3">
