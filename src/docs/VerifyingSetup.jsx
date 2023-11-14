@@ -16,7 +16,15 @@ const VerifyingSetup = () => {
       <Terminal>
         <p>cjx -v</p>
       </Terminal>
-      <div className="border-l-4 border-red-500 p-5">
+      <p className="mb-4">
+        If there is any error. You should use the{" "}
+        <CodeSnippet>cjx doctor</CodeSnippet> command to further investigate
+        what went wrong.
+      </p>
+      <Terminal>
+        <p>cjx doctor</p>
+      </Terminal>
+      <div className="border-l-4 border-red-500 p-5 text-[#b4a4a4]">
         <SecondaryHeading className="mb-4">⚠️ Caution</SecondaryHeading>
         <p>
           CJX CLI is currently built for Windows users only. Users of other
