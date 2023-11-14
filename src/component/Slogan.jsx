@@ -4,7 +4,7 @@ export default function Slogan() {
     element.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <div className="flex flex-col justify-center items-center  text-center absolute top-55 lg:mx-60 xl:mx-80 text-custom-pink">
+    <div className="flex flex-col justify-center items-center  text-center absolute lg:mx-60 xl:mx-80 text-custom-pink">
       <p className="text-[60px] tracking-[-6.42px] leading-[60px] font-bold">
         Effortless JavaFX Environment Setup in VS Code
       </p>
