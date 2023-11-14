@@ -4,6 +4,7 @@ import DocPages from "../utils/docPages";
 
 export default function DocBody() {
   const { selectedSubMenu } = useContext(GlobalContext);
+  const currentDoc = DocPages[selectedSubMenu.name];
 
-  return DocPages[selectedSubMenu.name];
+  return currentDoc;
 }
