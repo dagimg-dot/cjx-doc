@@ -21,6 +21,7 @@ const Prerequisites = () => {
             href={prerequisiteLinks[item]}
             target="_blank"
             className="text-[#aab6dd]"
+            key={item}
           >
             {idx + 1}. {item}
           </a>
