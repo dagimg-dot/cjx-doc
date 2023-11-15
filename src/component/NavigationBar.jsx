@@ -6,7 +6,7 @@ import "../css/NavigationBarHover.css";
 
 export default function NavigationBar() {
   return (
-    <div className="flex justify-between px-28 py-4 bg-header-black text-white font-sans z-50 absolute w-full font-bold">
+    <div className="flex justify-between px-28 py-4 bg-header-black text-white font-sans z-50 absolute w-full font-bold text-sm">
       <div>
         <li className="list-none ">
           <Link to="/">
@@ -18,7 +18,7 @@ export default function NavigationBar() {
         <li className="mx-auto list-none px-3">
           <Link
             to="/docs"
-            className="text-[11px] text-header-white tracking-[1.5px] relative nav-bar "
+            className="text-header-white tracking-[1.5px] relative nav-bar "
           >
             DOCS<span className=""></span>
           </Link>
@@ -26,7 +26,7 @@ export default function NavigationBar() {
         <li className="mx-auto list-none px-3">
           <Link
             to="/contact"
-            className="text-[11px] text-header-white tracking-[1.5px] relative nav-bar"
+            className="text-header-white tracking-[1.5px] relative nav-bar"
           >
             CONTACT<span className=""></span>
           </Link>
