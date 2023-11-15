@@ -1,22 +1,11 @@
-import { useState } from "react";
 import Search from "./Search";
+import { GlobalContext } from "../store/store";
+import { useContext } from "react";
+import useSearch from "../hooks/useSearch";
 
 export default function SearchField() {
-  const [searchToken, setSearchToken] = useState("");
-
-  const handleInputChange = (event) => {
-    setSearchToken(event.target.value);
-  };
-
-  const unfocusSearchField = (event) => {
-    if (event.target.nodeName !== "INPUT") {
-      setSearchToken("");
-    } else {
-      handleInputChange(event);
-    }
-  };
-
-  window.addEventListener("click", unfocusSearchField);
+  const { handleChildClick } = useContext(GlobalContext);
+  const [results, searchToken, handleInputChange] = useSearch();
 
   return (
     <div className="flex flex-col">
@@ -28,12 +17,18 @@ export default function SearchField() {
           onChange={handleInputChange}
         />
       </div>
-      {searchToken !== "" ? (
-        <div className="mt-12  bg-slate-900/60 rounded-lg list-none p-4 absolute w-[219px]">
-          <li>{searchToken}</li>
+      {searchToken !== "" && results.length > 0 && (
+        <div className="mt-12  bg-slate-900/80 rounded-lg list-none p-4 absolute w-[219px]">
+          {results.map((result) => (
+            <li
+              key={result}
+              className="hover:bg-slate-400 cursor-pointer p-2 rounded-md"
+              onClick={() => handleChildClick(result)}
+            >
+              {result}
+            </li>
+          ))}
         </div>
-      ) : (
-        ""
       )}
     </div>
   );
