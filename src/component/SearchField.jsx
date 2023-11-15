@@ -5,7 +5,12 @@ import useSearch from "../hooks/useSearch";
 
 export default function SearchField() {
   const { handleChildClick } = useContext(GlobalContext);
-  const [results, searchToken, handleInputChange] = useSearch();
+  const [results, searchToken, setSearchToken] = useSearch();
+
+  const handlerResultClick = (result) => {
+    setSearchToken("");
+    handleChildClick(result)
+  }
 
   return (
     <div className="flex flex-col">
@@ -13,17 +18,18 @@ export default function SearchField() {
         <Search />
         <input
           type="text"
-          className="bg-transparent focus:outline-none focus:border-red-400"
-          onChange={handleInputChange}
+          className="bg-transparent focus:outline-none"
+          onChange={(event) => setSearchToken(event.target.value)}
+          value={searchToken}
         />
       </div>
       {searchToken !== "" && results.length > 0 && (
-        <div className="mt-12  bg-slate-900/80 rounded-lg list-none p-4 absolute w-[219px]">
+        <div className="mt-12  bg-slate-800/90 rounded-lg list-none p-4 absolute w-[219px]">
           {results.map((result) => (
             <li
               key={result}
               className="hover:bg-slate-400 cursor-pointer p-2 rounded-md"
-              onClick={() => handleChildClick(result)}
+              onClick={() => handlerResultClick(result)}
             >
               {result}
             </li>
