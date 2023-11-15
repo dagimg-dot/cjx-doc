@@ -3,4 +3,10 @@ const ACTION_TYPE = {
   CHILD_CLICK: "CHILD_CLICK",
 };
 
-export { ACTION_TYPE };
+const PAGES = {
+  DOCS: "docs",
+  HOME: "home",
+  CONTACT: "contact",
+};
+
+export { ACTION_TYPE, PAGES };
