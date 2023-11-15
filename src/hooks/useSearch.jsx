@@ -3,17 +3,15 @@ import { docPagesList } from "../utils/data";
 
 const useSearch = () => {
   const [searchToken, setSearchToken] = useState("");
-  const [results, setResults] = useState([]);
-
-  const handleInputChange = (event) => {
-    setSearchToken(event.target.value);
-  };
+  const [results, setResults] = useState(docPagesList);
+  const [isFocused, setIsFocused] = useState(false);
 
   const unfocusSearchField = (event) => {
     if (event.target.nodeName !== "INPUT") {
-      setSearchToken("");
+      setIsFocused(false);
+      setResults([]);
     } else {
-      handleInputChange(event);
+      setIsFocused(true);
     }
   };
 
@@ -21,30 +19,29 @@ const useSearch = () => {
     return str.toLowerCase();
   };
 
-  const searchDoc = () => {
-    if (searchToken === "") {
-      return;
-    }
-
-    setResults([]);
-
-    docPagesList.forEach((page) => {
-      if (
-        lowerCase(page).includes(lowerCase(searchToken)) &&
-        !results.includes(page)
-      ) {
-        setResults([...results, page]);
-      }
-    });
-  };
-
   useEffect(() => {
+    const searchDoc = () => {
+      const newResult = [];
+      if (searchToken !== "") {
+        docPagesList.forEach((page) => {
+          if (
+            lowerCase(page).includes(lowerCase(searchToken)) &&
+            !newResult.includes(page)
+          ) {
+            newResult.push(page);
+          }
+        });
+      }
+
+      setResults(newResult);
+    };
+
     searchDoc();
-  }, [searchToken]);
+  }, [searchToken, isFocused]);
 
   window.addEventListener("click", unfocusSearchField);
 
-  return [results, searchToken, handleInputChange];
+  return [results, searchToken, setSearchToken];
 };
 
 export default useSearch;
