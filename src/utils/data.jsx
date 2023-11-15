@@ -1,3 +1,5 @@
+import DocPages from "./docPages";
+
 const features = [
   "initialize a JavaFx project easily",
   "faster development",
@@ -18,4 +20,6 @@ const prerequisiteLinks = {
     "https://marketplace.visualstudio.com/items?itemName=bilalekrem.scenebuilderextension",
 };
 
-export { features, prerequisiteLinks };
+const docPagesList = Object.keys(DocPages);
+
+export { features, prerequisiteLinks, docPagesList };
