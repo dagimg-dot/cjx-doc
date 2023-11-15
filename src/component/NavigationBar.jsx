@@ -4,11 +4,12 @@ import logo from "../assets/image/cjx-logo.png";
 import "typeface-poppins";
 import "../css/NavigationBarHover.css";
 import { PAGES } from "../utils/types";
+import SearchField from "./SearchField";
 
 export default function NavigationBar() {
   const currentPage = useLocation();
   const isDocPage = currentPage.pathname.split("/").pop() === PAGES.DOCS;
-  const paddingLeft = isDocPage ? "pl-52" : "";
+  const paddingLeft = isDocPage ? "pl-56" : "";
 
   return (
     <div className="flex justify-between px-28 py-4 bg-header-black text-white font-sans z-50 absolute w-full font-bold text-sm">
@@ -19,7 +20,7 @@ export default function NavigationBar() {
           </Link>
         </li>
       </div>
-      <div className={`flex py-3 ${paddingLeft}`}>
+      <div className={`flex py-3 items-center ${paddingLeft}`}>
         <li className="mx-auto list-none px-3">
           <Link
             to="/docs"
@@ -37,15 +38,15 @@ export default function NavigationBar() {
           </Link>
         </li>
       </div>
-      <div className="flex py-3 px-5 items-center gap-4">
-        {isDocPage && <input type="text" />}
+      <div className="flex py-3 px-5 items-center gap-5">
+        {isDocPage && <SearchField />}
         <li className="list-none">
           <a
             href="https://github.com/dagimg-dot/cjx-cli-tool"
             target={"_blank"}
             title={"Github Link"}
           >
-            <FaGithub className="scale-150" />
+            <FaGithub className="scale-[2]" />
           </a>
         </li>
       </div>
