@@ -7,8 +7,8 @@ import RightSidebar from "../component/RightSidebar";
 export default function () {
   return (
     <div className="bg-bodyGradient h-screen">
-      <Default>
-        <GlobalProvider>
+      <GlobalProvider>
+        <Default>
           <div className="grid grid-cols-5 h-full w-full pt-28 px-28 text-[13px]">
             <div className="flex flex-col border-r border-custom-white overflow-y-auto">
               <LeftSidebar />
@@ -20,8 +20,8 @@ export default function () {
               <RightSidebar />
             </div>
           </div>
-        </GlobalProvider>
-      </Default>
+        </Default>
+      </GlobalProvider>
     </div>
   );
 }
