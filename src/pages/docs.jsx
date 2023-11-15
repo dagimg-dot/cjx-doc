@@ -4,7 +4,7 @@ import Default from "../layout/Default";
 import LeftSidebar from "../component/LeftSidebar";
 import RightSidebar from "../component/RightSidebar";
 
-export default function () {
+const Docs = () => {
   return (
     <div className="bg-bodyGradient h-screen">
       <GlobalProvider>
@@ -24,4 +24,6 @@ export default function () {
       </GlobalProvider>
     </div>
   );
-}
+};
+
+export default Docs;

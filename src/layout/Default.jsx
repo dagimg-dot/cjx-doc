@@ -1,10 +1,12 @@
 import NavigationBar from "../component/NavigationBar";
 
-export default function Default({ children }) {
+const Default = ({ children }) => {
   return (
     <>
       <NavigationBar />
       {children}
     </>
   );
-}
+};
+
+export default Default;

@@ -1,7 +1,7 @@
 import Bash from "./Bash";
 import Features from "./Features";
 
-export default function MoreInfo() {
+const MoreInfo = () => {
   return (
     <div className="flex px-20 text-custom-pink items-center pt-10">
       <div className="flex flex-col">
@@ -24,4 +24,6 @@ export default function MoreInfo() {
       <Bash />
     </div>
   );
-}
+};
+
+export default MoreInfo;

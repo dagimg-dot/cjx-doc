@@ -1,4 +1,4 @@
-function Search() {
+const Search = () => {
   return (
     <svg
       width="15"
@@ -13,6 +13,6 @@ function Search() {
       />
     </svg>
   );
-}
+};
 
 export default Search;

@@ -2,7 +2,7 @@ import Hero from "../component/Hero";
 import MoreInfo from "../component/MoreInfo";
 import Default from "../layout/Default";
 
-export default function () {
+const Home = () => {
   return (
     <div className="bg-bodyGradient">
       <div className="h-screen">
@@ -15,4 +15,6 @@ export default function () {
       </div>
     </div>
   );
-}
+};
+
+export default Home;

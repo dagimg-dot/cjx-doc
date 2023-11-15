@@ -3,7 +3,7 @@ import jd from "../assets/image/jd.jpg";
 import Socials from "../component/Socials";
 import Default from "../layout/Default";
 
-export default function () {
+const Contact = () => {
   const emri_socials = {
     gh: "https://github.com/jeremi-code",
     li: "https://linkedin.com/in/ermias-sintayehu-03955224b/",
@@ -52,4 +52,6 @@ export default function () {
       </Default>
     </div>
   );
-}
+};
+
+export default Contact;

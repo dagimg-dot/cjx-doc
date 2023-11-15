@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 
-export default function Terminal({ style, children }) {
+const Terminal = ({ style, children }) => {
   return (
     <div
       className={`flex flex-col bg-black font-consolas text-bash-white mt-6 mb-6 border border-custom-white rounded-lg ${style}`}
@@ -23,7 +23,12 @@ export default function Terminal({ style, children }) {
         </div>
         <p className="text-sm flex-grow text-center pr-10">bash</p>
       </div>
-      <div className="p-4 flex gap-4">{"$ "}{children}</div>
+      <div className="p-4 flex gap-4">
+        {"$ "}
+        {children}
+      </div>
     </div>
   );
-}
+};
+
+export default Terminal;

@@ -1,7 +1,7 @@
 import useAnimation from "../hooks/useAnimation";
 import Terminal from "../layout/Terminal";
 
-export default function Bash() {
+const Bash = () => {
   const bashCommands = [
     "cjx init",
     "cjx setup <JavaFX SDK directory>",
@@ -18,4 +18,6 @@ export default function Bash() {
       <p className="text-sm tracking-[1.5px] mt-[1.5px]">{`${displayedCommand}`}</p>
     </Terminal>
   );
-}
+};
+
+export default Bash;

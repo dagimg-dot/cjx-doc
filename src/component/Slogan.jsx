@@ -1,4 +1,4 @@
-export default function Slogan() {
+const Slogan = () => {
   const scrollToMoreInfo = () => {
     const element = document.getElementById("cjx-heading");
     element.scrollIntoView({ behavior: "smooth" });
@@ -22,4 +22,6 @@ export default function Slogan() {
       </div>
     </div>
   );
-}
+};
+
+export default Slogan;

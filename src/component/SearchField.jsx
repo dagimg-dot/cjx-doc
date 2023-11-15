@@ -3,14 +3,14 @@ import { GlobalContext } from "../store/store";
 import { useContext } from "react";
 import useSearch from "../hooks/useSearch";
 
-export default function SearchField() {
+const SearchField = () => {
   const { handleChildClick } = useContext(GlobalContext);
   const [results, searchToken, setSearchToken] = useSearch();
 
   const handlerResultClick = (result) => {
     setSearchToken("");
-    handleChildClick(result)
-  }
+    handleChildClick(result);
+  };
 
   return (
     <div className="flex flex-col">
@@ -38,4 +38,6 @@ export default function SearchField() {
       )}
     </div>
   );
-}
+};
+
+export default SearchField;

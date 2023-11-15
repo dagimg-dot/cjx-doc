@@ -1,4 +1,4 @@
-function Check() {
+const Check = () => {
   return (
     <svg
       width="16"
@@ -7,11 +7,9 @@ function Check() {
       xmlns="http://www.w3.org/2000/svg"
       fill="#C5C5C5"
     >
-      <path
-        d="M14.431 3.323l-8.47 10-.79-.036-3.35-4.77.818-.574 2.978 4.24 8.051-9.506.764.646z"
-      />
+      <path d="M14.431 3.323l-8.47 10-.79-.036-3.35-4.77.818-.574 2.978 4.24 8.051-9.506.764.646z" />
     </svg>
   );
-}
+};
 
 export default Check;

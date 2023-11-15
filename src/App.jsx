@@ -3,13 +3,14 @@ import Home from "./pages/home";
 import Contact from "./pages/contact";
 import Docs from "./pages/docs";
 
-export default function App() {
+const App = () => {
   return (
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/contact" element={<Contact />}></Route>
-        <Route path="/docs" element={<Docs />}></Route>
-      </Routes>
+    <Routes>
+      <Route path="/" element={<Home />}></Route>
+      <Route path="/contact" element={<Contact />}></Route>
+      <Route path="/docs" element={<Docs />}></Route>
+    </Routes>
   );
-}
+};
 
+export default App;

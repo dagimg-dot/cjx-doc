@@ -3,7 +3,7 @@ import { ChevronDown, ChevronRight } from "./Chevron";
 import { GlobalContext } from "../store/store";
 import { useContext } from "react";
 
-export default function Menu({ menu_name }) {
+const Menu = ({ menu_name }) => {
   const { parent, handleParentClick } = useContext(GlobalContext);
 
   const isSelected = parent[menu_name].isSelected;
@@ -27,4 +27,6 @@ export default function Menu({ menu_name }) {
       )}
     </>
   );
-}
+};
+
+export default Menu;

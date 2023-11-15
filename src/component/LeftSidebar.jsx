@@ -3,7 +3,7 @@ import { GlobalContext } from "../store/store";
 import Menu from "./Menu";
 import { useContext } from "react";
 
-export default function LeftSidebar() {
+const LeftSidebar = () => {
   const { parent } = useContext(GlobalContext);
   const parents = Object.keys(parent);
 
@@ -14,4 +14,6 @@ export default function LeftSidebar() {
       ))}
     </>
   );
-}
+};
+
+export default LeftSidebar;

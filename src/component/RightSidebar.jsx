@@ -1,8 +1,7 @@
 import { GlobalContext } from "../store/store";
 import { useContext } from "react";
-import SecondaryHeading from "./DocComponent/SecondaryHeading";
 
-export default function RightSidebar() {
+const RightSidebar = () => {
   const { selectedSubMenu } = useContext(GlobalContext);
   const subChildren = Object.keys(selectedSubMenu.sub_children);
 
@@ -25,4 +24,6 @@ export default function RightSidebar() {
       )}
     </div>
   );
-}
+};
+
+export default RightSidebar;

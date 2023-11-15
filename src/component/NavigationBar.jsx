@@ -6,7 +6,7 @@ import "../css/NavigationBarHover.css";
 import { PAGES } from "../utils/types";
 import SearchField from "./SearchField";
 
-export default function NavigationBar() {
+const NavigationBar = () => {
   const currentPage = useLocation();
   const isDocPage = currentPage.pathname.split("/").pop() === PAGES.DOCS;
   const paddingLeft = isDocPage ? "pl-56" : "";
@@ -52,4 +52,6 @@ export default function NavigationBar() {
       </div>
     </div>
   );
-}
+};
+
+export default NavigationBar;
