@@ -4,16 +4,6 @@ import { docPagesList } from "../utils/data";
 const useSearch = () => {
   const [searchToken, setSearchToken] = useState("");
   const [results, setResults] = useState(docPagesList);
-  const [isFocused, setIsFocused] = useState(false);
-
-  const unfocusSearchField = (event) => {
-    if (event.target.nodeName !== "INPUT") {
-      setIsFocused(false);
-      setResults([]);
-    } else {
-      setIsFocused(true);
-    }
-  };
 
   const lowerCase = (str) => {
     return str.toLowerCase();
@@ -37,9 +27,7 @@ const useSearch = () => {
     };
 
     searchDoc();
-  }, [searchToken, isFocused]);
-
-  window.addEventListener("click", unfocusSearchField);
+  }, [searchToken]);
 
   return [results, searchToken, setSearchToken];
 };
