@@ -12,8 +12,10 @@ const SearchField = () => {
   const handlerResultClick = (result) => {
     setSearchToken("");
     handleChildClick(result);
-    const parentName = findParent(parent, result);
-    handleParentClick(parentName);
+    const { parentName, isSelected } = findParent(parent, result);
+    if (!isSelected) {
+      handleParentClick(parentName);
+    }
   };
 
   return (
