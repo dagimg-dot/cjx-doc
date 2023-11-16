@@ -17,22 +17,22 @@ const Reducer = (state, action) => {
       };
 
     case ACTION_TYPE.CHILD_CLICK:
-      const parent = findParent(state.parent, action.payload);
+      const { parentName } = findParent(state.parent, action.payload);
 
-      const choosenChild = state.parent[parent].children[action.payload];
+      const choosenChild = state.parent[parentName].children[action.payload];
 
       return {
         parent: {
           ...state.parent,
-          [parent]: {
+          [parentName]: {
             children: {
-              ...state.parent[parent].children,
+              ...state.parent[parentName].children,
               [choosenChild]: {
                 isSelected: !choosenChild.isSelected,
                 ...choosenChild.sub_children,
               },
             },
-            ...state.parent[parent],
+            ...state.parent[parentName],
           },
         },
         selectedSubMenu: choosenChild,
