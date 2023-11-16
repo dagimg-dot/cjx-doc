@@ -1,17 +1,20 @@
-import NavigationBar from "../component/NavigationBar";
-import CjxBody from "../component/cjxBody";
+import Hero from "../component/Hero";
 import MoreInfo from "../component/MoreInfo";
+import Default from "../layout/Default";
 
-export default function () {
+const Home = () => {
   return (
     <div className="bg-bodyGradient">
-      <div className="w-screen h-screen">
-        <NavigationBar />
-        <CjxBody />
+      <div className="h-screen">
+        <Default>
+          <Hero />
+        </Default>
       </div>
-      <div className="w-screen h-screen">
+      <div className="h-screen">
         <MoreInfo />
       </div>
     </div>
   );
 };
+
+export default Home;

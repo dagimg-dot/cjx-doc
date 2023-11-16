@@ -1,0 +1,172 @@
+{
+    "parent": {
+        "Getting Started": {
+            "name": "Getting Started",
+            "isSelected": true,
+            "children": {
+                "Prerequisites": {
+                    "name": "Prerequisites",
+                    "isSelected": true,
+                    "sub_children": {
+                        "Other Programs": {
+                            "name": "Other Programs",
+                            "isFocused": false
+                        },
+                        "Downloading CJX CLI": {
+                            "name": "Downloading CJX CLI",
+                            "isFocused": false
+                        }
+                    }
+                },
+                "Setting Up the Environment": {
+                    "name": "Setting Up the Environment",
+                    "isSelected": false,
+                    "sub_children": {
+                        "Initializing CJX": {
+                            "name": "Initializing CJX",
+                            "isFocused": false
+                        },
+                        "Specifying JavaFX SDK Path": {
+                            "name": "Specifying JavaFX SDK Path",
+                            "isFocused": false
+                        },
+                        "Adding CJX CLI to environment variables": {
+                            "name": "Adding CJX CLI to environment variables",
+                            "isFocused": false
+                        }
+                    }
+                },
+                "Verifying Setup": {
+                    "name": "Verifying Setup",
+                    "isSelected": false,
+                    "sub_children": {}
+                }
+            }
+        },
+        "Working with Projects": {
+            "name": "Working with Projects",
+            "isSelected": false,
+            "children": {
+                "New Project": {
+                    "name": "New Project",
+                    "isSelected": false,
+                    "sub_children": {
+                        "Simple JavaFX Project": {
+                            "name": "Simple JavaFX Project",
+                            "isFocused": false
+                        },
+                        "Advanced FXML Project": {
+                            "name": "Advanced FXML Project",
+                            "isFocused": false
+                        }
+                    }
+                },
+                "Cloning Projects": {
+                    "name": "Cloning Projects",
+                    "isSelected": false,
+                    "sub_children": {}
+                }
+            }
+        },
+        "CLI Commands": {
+            "name": "Downloading CLI Commands",
+            "isSelected": false,
+            "children": {
+                "Command Reference": {
+                    "name": "Command Reference",
+                    "isSelected": false,
+                    "sub_children": {
+                        "cjx init": {
+                            "name": "cjx init",
+                            "isFocused": false
+                        },
+                        "cjx setup": {
+                            "name": "cjx setup",
+                            "isFocused": false
+                        },
+                        "cjx create": {
+                            "name": "cjx create",
+                            "isFocused": false
+                        },
+                        "cjx clone": {
+                            "name": "cjx clone",
+                            "isFocused": false
+                        },
+                        "cjx doctor": {
+                            "name": "cjx doctor",
+                            "isFocused": false
+                        }
+                    }
+                }
+            }
+        },
+        "Updating CJX CLI": {
+            "name": "Updating CJX CLI",
+            "isSelected": false,
+            "children": {
+                "The Updating Process": {
+                    "name": "The Updating Process",
+                    "isSelected": false,
+                    "sub_children": {
+                        "Checking for updates": {
+                            "name": "Checking for updates",
+                            "isFocused": false
+                        },
+                        "Updating CJX": {
+                            "name": "Updating CJX",
+                            "isFocused": false
+                        },
+                        "Verifying CLI Version": {
+                            "name": "Verifying CLI Version",
+                            "isFocused": false
+                        }
+                    }
+                }
+            }
+        },
+        "Troublshooting": {
+            "name": "Troublshooting",
+            "isSelected": false,
+            "children": {
+                "Common Problems": {
+                    "name": "Common Problems",
+                    "isSelected": false,
+                    "sub_children": {
+                        "cjx is not recognized": {
+                            "name": "cjx is not recognized",
+                            "isFocused": false
+                        },
+                        "cjx sdk path is not set": {
+                            "name": "cjx sdk path is not set",
+                            "isFocused": false
+                        },
+                        "For other errors": {
+                            "name": "For other errors",
+                            "isFocused": false
+                        }
+                    }
+                },
+                "FAQs": {
+                    "name": "FAQs",
+                    "isSelected": false,
+                    "sub_children": {}
+                }
+            }
+        }
+    },
+    "selectedSubMenu": {
+        "name": "Prerequisites",
+        "isSelected": true,
+        "sub_children": {
+            "Other Programs": {
+                "name": "Other Programs",
+                "isFocused": true
+            },
+            "Downloading CJX CLI": {
+                "name": "Downloading CJX CLI",
+                "isFocused": false
+            }
+        }
+    }
+
+}
