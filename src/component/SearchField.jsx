@@ -2,14 +2,18 @@ import Search from "./Search";
 import { GlobalContext } from "../store/store";
 import { useContext } from "react";
 import useSearch from "../hooks/useSearch";
+import findParent from "../utils/findParent";
 
 const SearchField = () => {
-  const { handleChildClick } = useContext(GlobalContext);
+  const { parent, handleChildClick, handleParentClick } =
+    useContext(GlobalContext);
   const [results, searchToken, setSearchToken] = useSearch();
 
   const handlerResultClick = (result) => {
     setSearchToken("");
     handleChildClick(result);
+    const parentName = findParent(parent, result);
+    handleParentClick(parentName);
   };
 
   return (
