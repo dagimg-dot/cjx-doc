@@ -10,7 +10,7 @@ const Home = () => {
           <Hero />
         </Default>
       </div>
-      <div className="h-screen">
+      <div>
         <MoreInfo />
       </div>
     </div>
