@@ -14,7 +14,7 @@ const Bash = () => {
   const displayedCommand = useAnimation(bashCommands);
 
   return (
-    <Terminal style={"w-[550px] h-[300px]"}>
+    <Terminal style={"w-full h-[350px] mimd:w-3/4"}>
       <p className="text-sm tracking-[1.5px] mt-[1.5px]">{`${displayedCommand}`}</p>
     </Terminal>
   );
