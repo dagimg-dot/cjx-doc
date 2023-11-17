@@ -12,7 +12,7 @@ const NavigationBar = () => {
   const paddingLeft = isDocPage ? "pl-56" : "";
 
   return (
-    <div className="flex justify-between px-28 py-4 bg-header-black text-white font-sans z-50 absolute w-full font-bold text-sm">
+    <div className="flex justify-between px-28 minmd:px-8 py-4 bg-header-black text-white font-sans z-50 absolute w-full font-bold text-sm">
       <div>
         <li className="list-none ">
           <Link to="/">
