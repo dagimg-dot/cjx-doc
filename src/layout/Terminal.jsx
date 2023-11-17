@@ -21,7 +21,7 @@ const Terminal = ({ style, children }) => {
             className="text-green-500 text-xs mt-1 ml-2 mr-6"
           />
         </div>
-        <p className="text-sm flex-grow ml-36 ">bash</p>
+        <p className="text-sm flex-grow ml-40 ">bash</p>
       </div>
       <div className="p-4 flex gap-4">
         {"$ "}
