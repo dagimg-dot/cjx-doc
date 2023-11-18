@@ -3,8 +3,13 @@ import { GlobalProvider } from "../store/store";
 import Default from "../layout/Default";
 import LeftSidebar from "../component/LeftSidebar";
 import RightSidebar from "../component/RightSidebar";
+import { docPagesList } from "../utils/data";
 
 const Docs = () => {
+  if (window.location.hash === "") {
+    window.location.hash = docPagesList[0];
+  }
+
   return (
     <div className="bg-bodyGradient h-screen">
       <GlobalProvider>
