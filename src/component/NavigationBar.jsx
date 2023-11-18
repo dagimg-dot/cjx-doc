@@ -7,8 +7,8 @@ import { PAGES } from "../utils/types";
 import SearchField from "./SearchField";
 
 const NavigationBar = () => {
-  const currentPage = useLocation();
-  const isDocPage = currentPage.pathname.split("/").pop() === PAGES.DOCS;
+  const { pathname } = useLocation();
+  const isDocPage = pathname.split("/").pop() === PAGES.DOCS;
   const paddingLeft = isDocPage ? "pl-56" : "";
 
   return (
