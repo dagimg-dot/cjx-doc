@@ -1,9 +1,15 @@
 import { GlobalContext } from "../store/store";
 import { useContext } from "react";
+import useHash from "../hooks/useHash";
+import findParent from "../utils/findParent";
 
 const RightSidebar = () => {
-  const { selectedSubMenu } = useContext(GlobalContext);
-  const subChildren = Object.keys(selectedSubMenu.sub_children);
+  const { parent } = useContext(GlobalContext);
+  const currentPage = useHash();
+  const { parentName } = findParent(parent, currentPage);
+  const subChildren = Object.keys(
+    parent[parentName].children[currentPage].sub_children
+  );
 
   return (
     <div className="mx-2">
