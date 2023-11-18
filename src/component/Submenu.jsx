@@ -1,19 +1,16 @@
-import { useContext } from "react";
-import { GlobalContext } from "../store/store";
+import { Link } from "react-router-dom";
+import useHash from "../hooks/useHash";
 
 const Submenu = ({ submenu_name }) => {
-  const { selectedSubMenu, handleChildClick } = useContext(GlobalContext);
+  const currentPage = useHash();
   const selectedColor =
-    submenu_name === selectedSubMenu.name
+    submenu_name === currentPage
       ? "border-l-2 pl-2 text-[#bcbcbc] border-[#bcbcbc]"
       : "";
 
   return (
-    <button
-      className={`text-white cursor-pointer block ${selectedColor}`}
-      onClick={() => handleChildClick(submenu_name)}
-    >
-      {submenu_name}
+    <button className={`text-white cursor-pointer block ${selectedColor}`}>
+      <Link to={"#" + submenu_name}>{submenu_name}</Link>
     </button>
   );
 };
