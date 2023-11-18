@@ -1,10 +1,10 @@
-import { GlobalContext } from "../store/store";
-import { useContext } from "react";
 import DocPages from "../utils/docPages";
+import useHash from "../hooks/useHash";
 
 const DocBody = () => {
-  const { selectedSubMenu } = useContext(GlobalContext);
-  const currentDoc = DocPages[selectedSubMenu.name];
+  const currentHash = useHash();
+
+  const currentDoc = DocPages[currentHash];
 
   return <div className="leading-6">{currentDoc}</div>;
 };
