@@ -4,11 +4,20 @@ import Default from "../layout/Default";
 import LeftSidebar from "../component/LeftSidebar";
 import RightSidebar from "../component/RightSidebar";
 import { docPagesList } from "../utils/data";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const Docs = () => {
-  if (window.location.hash === "") {
-    window.location.hash = docPagesList[0];
-  }
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (location.hash === "") {
+      navigate(`/docs#${docPagesList[0]}`, {
+        replace: true,
+      });
+    }
+  }, [location]);
 
   return (
     <div className="bg-bodyGradient h-screen">
