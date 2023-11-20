@@ -13,7 +13,7 @@ const Docs = () => {
 
   useEffect(() => {
     if (location.hash === "") {
-      navigate(`/docs#${docPagesList[0]}`, {
+      navigate(`#${docPagesList[0]}`, {
         replace: true,
       });
     }
