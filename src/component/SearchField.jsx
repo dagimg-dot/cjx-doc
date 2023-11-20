@@ -4,6 +4,7 @@ import { useContext, useState } from "react";
 import useSearch from "../hooks/useSearch";
 import findParent from "../utils/findParent";
 import useOutsideClick from "../hooks/useOutSideClick";
+import useKeyboard from "../hooks/useKeyboard";
 
 const SearchField = () => {
   const { parent, handleChildClick, handleParentClick } =
@@ -13,6 +14,7 @@ const SearchField = () => {
   const ref = useOutsideClick(() => {
     setIsShown(false);
   });
+  const inputRef = useKeyboard();
 
   const handlerResultClick = (result) => {
     setSearchToken("");
@@ -33,7 +35,7 @@ const SearchField = () => {
             className="bg-transparent focus:outline-none"
             onChange={(event) => setSearchToken(event.target.value)}
             onFocus={() => setIsShown(true)}
-            value={searchToken}
+            value={searchToken} ref={inputRef}
           />
         </div>
         {isShown && results.length > 0 && (
