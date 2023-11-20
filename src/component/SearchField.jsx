@@ -3,11 +3,13 @@ import { GlobalContext } from "../store/store";
 import { useContext } from "react";
 import useSearch from "../hooks/useSearch";
 import findParent from "../utils/findParent";
+import useKeyboard from "../hooks/useKeyboard";
 
 const SearchField = () => {
   const { parent, handleChildClick, handleParentClick } =
     useContext(GlobalContext);
   const [results, searchToken, setSearchToken] = useSearch();
+  const inputRef = useKeyboard();
 
   const handlerResultClick = (result) => {
     setSearchToken("");
@@ -26,7 +28,7 @@ const SearchField = () => {
           type="text"
           className="bg-transparent focus:outline-none"
           onChange={(event) => setSearchToken(event.target.value)}
-          value={searchToken}
+          value={searchToken} ref={inputRef}
         />
       </div>
       {searchToken !== "" && results.length > 0 && (
