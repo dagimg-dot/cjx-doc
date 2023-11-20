@@ -2,9 +2,9 @@ import DocPages from "../utils/docPages";
 import useHash from "../hooks/useHash";
 
 const DocBody = () => {
-  const currentHash = useHash();
+  const [currentPage] = useHash();
 
-  const currentDoc = DocPages[currentHash];
+  const currentDoc = DocPages[currentPage];
 
   return <div className="leading-6">{currentDoc}</div>;
 };
