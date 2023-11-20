@@ -1,3 +1,5 @@
+import Button from "./Button";
+
 const Slogan = () => {
   const scrollToMoreInfo = () => {
     const element = document.getElementById("cjx-heading");
@@ -10,9 +12,9 @@ const Slogan = () => {
       </p>
       <p className="text-[20px] pb-5 pt-3">Get Coding in Minutes!</p>
       <div className="flex gap-4">
-        <button className="bg-gradient-to-r from-amber-800 to-yellow-500 py-2 px-8 text-white rounded-md cursor-default">
+        <Button style={`transition duration-500 ease-in-out bg-gradient-to-r from-amber-800 to-yellow-500 py-2 px-8 hover:bg-gradient-to-r hover:from-yellow-500 hover:to-amber-800`}>
           Download
-        </button>
+        </Button>
         <a
           onClick={scrollToMoreInfo}
           className="border-2 border-lime-500 from-amber-800 to-yellow-500 py-2 px-8 text-white rounded-md cursor-default"
