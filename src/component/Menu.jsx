@@ -2,12 +2,15 @@ import Submenu from "./Submenu";
 import { ChevronDown, ChevronRight } from "./Chevron";
 import { GlobalContext } from "../store/store";
 import { useContext } from "react";
+import useHash from "../hooks/useHash";
 
 const Menu = ({ menu_name }) => {
   const { parent, handleParentClick } = useContext(GlobalContext);
 
   const isSelected = parent[menu_name].isSelected;
   const children = Object.keys(parent[menu_name].children);
+
+  useHash();
 
   return (
     <>

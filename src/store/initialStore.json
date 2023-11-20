@@ -2,11 +2,11 @@
     "parent": {
         "Getting Started": {
             "name": "Getting Started",
-            "isSelected": true,
+            "isSelected": false,
             "children": {
                 "Prerequisites": {
                     "name": "Prerequisites",
-                    "isSelected": true,
+                    "isSelected": false,
                     "sub_children": {
                         "Other Programs": {
                             "name": "Other Programs",

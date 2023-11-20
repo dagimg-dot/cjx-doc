@@ -5,10 +5,10 @@ import useSearch from "../hooks/useSearch";
 import findParent from "../utils/findParent";
 import useOutsideClick from "../hooks/useOutSideClick";
 import useKeyboard from "../hooks/useKeyboard";
+import { Link } from "react-router-dom";
 
 const SearchField = () => {
-  const { parent, handleChildClick, handleParentClick } =
-    useContext(GlobalContext);
+  const { parent, handleParentClick } = useContext(GlobalContext);
   const [results, searchToken, setSearchToken] = useSearch();
   const [isShown, setIsShown] = useState(true);
   const ref = useOutsideClick(() => {
@@ -18,7 +18,6 @@ const SearchField = () => {
 
   const handlerResultClick = (result) => {
     setSearchToken("");
-    handleChildClick(result);
     const { parentName, isSelected } = findParent(parent, result);
     if (!isSelected) {
       handleParentClick(parentName);
@@ -46,7 +45,7 @@ const SearchField = () => {
                 className="hover:bg-slate-400 cursor-pointer p-2 rounded-md"
                 onClick={() => handlerResultClick(result)}
               >
-                {result}
+                <Link to={"#" + result}>{result}</Link>
               </li>
             ))}
           </div>
