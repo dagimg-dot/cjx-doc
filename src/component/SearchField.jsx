@@ -27,7 +27,9 @@ const SearchField = () => {
     console.log(ev)
     ev.style.backgroundColor ='red'
   }
-  
+  const handleMouseLeave = (ev) => {
+    ev.style.backgroundColor=''
+  }
   return (
     <div className="flex flex-col">
       <div ref={ref}>
@@ -47,7 +49,7 @@ const SearchField = () => {
               <li
                 key={result}
                 className=" cursor-pointer p-2 rounded-md"
-                onClick={() => handlerResultClick(result)} onMouseLeave={(event) => handleMouseEnter(event.target)} onMouseEnter={(event) => handleMouseEnter(event.target)}
+                onClick={() => handlerResultClick(result)} onMouseLeave={(event) => handleMouseLeave(event.target)} onMouseEnter={(event) => handleMouseEnter(event.target)}
               >
                 <Link to={"#" + result}>{result}</Link>
               </li>
