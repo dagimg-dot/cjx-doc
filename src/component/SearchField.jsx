@@ -31,10 +31,12 @@ const SearchField = () => {
           <Search />
           <input
             type="text"
-            className="bg-transparent focus:outline-none"
+            placeholder="Search (Ctrl + k)"
+            className="bg-transparent focus:outline-none placeholder:opacity-50 placeholder:text-slate-500"
             onChange={(event) => setSearchToken(event.target.value)}
             onFocus={() => setIsShown(true)}
-            value={searchToken} ref={inputRef}
+            value={searchToken}
+            ref={inputRef}
           />
         </div>
         {isShown && results.length > 0 && (
