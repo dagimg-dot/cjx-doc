@@ -23,7 +23,11 @@ const SearchField = () => {
       handleParentClick(parentName);
     }
   };
-
+  const handleMouseEnter = (ev) => {
+    console.log(ev)
+    ev.style.backgroundColor ='red'
+  }
+  
   return (
     <div className="flex flex-col">
       <div ref={ref}>
@@ -34,16 +38,16 @@ const SearchField = () => {
             className="bg-transparent focus:outline-none"
             onChange={(event) => setSearchToken(event.target.value)}
             onFocus={() => setIsShown(true)}
-            value={searchToken} ref={inputRef}
+            value={searchToken} ref={inputRef} onKeyDown={(event) => handleKeyDown(event) }
           />
         </div>
         {isShown && results.length > 0 && (
-          <div className="mt-4  bg-slate-800/90 rounded-lg list-none p-4 absolute w-[219px]">
+          <div className="mt-4  bg-slate-800/90 rounded-lg list-none p-4 absolute w-[219px]" id="res">
             {results.map((result) => (
               <li
                 key={result}
-                className="hover:bg-slate-400 cursor-pointer p-2 rounded-md"
-                onClick={() => handlerResultClick(result)}
+                className=" cursor-pointer p-2 rounded-md"
+                onClick={() => handlerResultClick(result)} onMouseLeave={(event) => handleMouseEnter(event.target)} onMouseEnter={(event) => handleMouseEnter(event.target)}
               >
                 <Link to={"#" + result}>{result}</Link>
               </li>
