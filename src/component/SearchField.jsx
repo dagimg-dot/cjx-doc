@@ -35,7 +35,25 @@ const SearchField = () => {
     console.log(event);
     event.style.backgroundColor = "";
   };
- 
+  let index = -1
+  const handleKeyDown = (event) => {
+    if (event.code == "ArrowDown") {
+        if ( index == results.length-1) {
+          return 
+        } else if (index == -1) {
+          index = 0
+          const listElement = document.getElementById("res").children[0];
+          handleMouseOver(listElement);
+        } else {
+          index = index + 1
+          const prevListElement =
+          document.getElementById("res").children[index - 1];
+          const listElement = document.getElementById("res").children[index];
+          prevListElement.style.backgroundColor = "";
+          handleMouseOver(listElement);
+        }
+    } 
+    }
   
   return (
     <div className="flex flex-col">
