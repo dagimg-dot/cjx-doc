@@ -11,6 +11,7 @@ const SearchField = () => {
   const { parent, handleParentClick } = useContext(GlobalContext);
   const [results, searchToken, setSearchToken] = useSearch();
   const [isShown, setIsShown] = useState(true);
+  // const [index, setIndex] = useState(-1);
   const ref = useOutsideClick(() => {
     setIsShown(false);
   });
@@ -23,13 +24,19 @@ const SearchField = () => {
       handleParentClick(parentName);
     }
   };
-  const handleMouseEnter = (ev) => {
-    console.log(ev)
-    ev.style.backgroundColor ='red'
-  }
-  const handleMouseLeave = (ev) => {
-    ev.style.backgroundColor=''
-  }
+  const handleMouseOver = (event) => {
+    console.log(index)
+    if (event.nodeName == "LI") {
+      event.style.backgroundColor = "rgb(148,163,184)";
+
+    }
+  };
+  const handleMouseOut = (event) => {
+    console.log(event);
+    event.style.backgroundColor = "";
+  };
+ 
+  
   return (
     <div className="flex flex-col">
       <div ref={ref}>
@@ -40,16 +47,23 @@ const SearchField = () => {
             className="bg-transparent focus:outline-none"
             onChange={(event) => setSearchToken(event.target.value)}
             onFocus={() => setIsShown(true)}
-            value={searchToken} ref={inputRef} onKeyDown={(event) => handleKeyDown(event) }
+            value={searchToken}
+            ref={inputRef}
+            onKeyDown={(event) => handleKeyDown(event)}
           />
         </div>
         {isShown && results.length > 0 && (
-          <div className="mt-4  bg-slate-800/90 rounded-lg list-none p-4 absolute w-[219px]" id="res">
+          <div
+            className="mt-4  bg-slate-800/90 rounded-lg list-none p-4 absolute w-[219px]"
+            id="res"
+          >
             {results.map((result) => (
               <li
                 key={result}
-                className=" cursor-pointer p-2 rounded-md"
-                onClick={() => handlerResultClick(result)} onMouseLeave={(event) => handleMouseLeave(event.target)} onMouseEnter={(event) => handleMouseEnter(event.target)}
+                className="hover:bg-slate-400 cursor-pointer p-2 rounded-md"
+                onClick={() => handlerResultClick(result)}
+                onMouseOut={(event) => handleMouseOut(event.target)}
+                onMouseOver={(event) => handleMouseOver(event.target)}
               >
                 <Link to={"#" + result}>{result}</Link>
               </li>
