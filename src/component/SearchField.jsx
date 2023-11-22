@@ -52,7 +52,25 @@ const SearchField = () => {
           prevListElement.style.backgroundColor = "";
           handleMouseOver(listElement);
         }
-    } 
+    } else if (event.code == "ArrowUp") {
+        if (index == -1) {
+          return;
+        } else if (index == 0) {
+          const listElement = document.getElementById("res").children[index];
+          listElement.style.backgroundColor = "";
+          index = -1
+          return
+        } else {
+          console.log(index)
+          index = index - 1
+          const prevListElement =
+          document.getElementById("res").children[index + 1];
+          const listElement = document.getElementById("res").children[index];
+          prevListElement.style.backgroundColor = "";
+          handleMouseOver(listElement);
+          
+        }
+      }
     }
   
   return (
