@@ -1,11 +1,11 @@
 import Search from "./Search";
 import { GlobalContext } from "../store/store";
-import { useContext, useState } from "react";
+import { useContext, useState, } from "react";
 import useSearch from "../hooks/useSearch";
 import findParent from "../utils/findParent";
 import useOutsideClick from "../hooks/useOutSideClick";
 import useKeyboard from "../hooks/useKeyboard";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 
 const SearchField = () => {
   const { parent, handleParentClick } = useContext(GlobalContext);
@@ -14,6 +14,7 @@ const SearchField = () => {
   const ref = useOutsideClick(() => {
     setIsShown(false);
   });
+  const navigate = useNavigate()
   const inputRef = useKeyboard();
 
   const handlerResultClick = (result) => {
@@ -70,6 +71,12 @@ const SearchField = () => {
         prevListElement.style.backgroundColor = "";
         handleMouseOver(listElement);
       }
+    } else if (event.keyCode == 13) {
+        console.log(index)
+        navigate(`#${results[index]}`)
+        handlerResultClick(results[index])
+        // console.log(results[index])
+        
     }
   };
 
