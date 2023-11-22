@@ -11,7 +11,6 @@ const SearchField = () => {
   const { parent, handleParentClick } = useContext(GlobalContext);
   const [results, searchToken, setSearchToken] = useSearch();
   const [isShown, setIsShown] = useState(true);
-  // const [index, setIndex] = useState(-1);
   const ref = useOutsideClick(() => {
     setIsShown(false);
   });
@@ -25,54 +24,55 @@ const SearchField = () => {
     }
   };
   const handleMouseOver = (event) => {
-    console.log(index)
+    console.log(index);
     if (event.nodeName == "LI") {
       event.style.backgroundColor = "rgb(148,163,184)";
-
     }
   };
   const handleMouseOut = (event) => {
     console.log(event);
     event.style.backgroundColor = "";
   };
-  let index = -1
+  let index = -1;
   const handleKeyDown = (event) => {
     if (event.code == "ArrowDown") {
-        if ( index == results.length-1) {
-          return 
-        } else if (index == -1) {
-          index = 0
-          const listElement = document.getElementById("res").children[0];
-          handleMouseOver(listElement);
-        } else {
-          index = index + 1
-          const prevListElement =
-          document.getElementById("res").children[index - 1];
-          const listElement = document.getElementById("res").children[index];
-          prevListElement.style.backgroundColor = "";
-          handleMouseOver(listElement);
-        }
+      if (index == results.length - 1) {
+        return;
+      } else if (index == -1) {
+        index = 0;
+        const listElement = document.getElementById("resultList").children[0];
+        handleMouseOver(listElement);
+      } else {
+        index = index + 1;
+        const prevListElement =
+          document.getElementById("resultList").children[index - 1];
+        const listElement =
+          document.getElementById("resultList").children[index];
+        prevListElement.style.backgroundColor = "";
+        handleMouseOver(listElement);
+      }
     } else if (event.code == "ArrowUp") {
-        if (index == -1) {
-          return;
-        } else if (index == 0) {
-          const listElement = document.getElementById("res").children[index];
-          listElement.style.backgroundColor = "";
-          index = -1
-          return
-        } else {
-          console.log(index)
-          index = index - 1
-          const prevListElement =
-          document.getElementById("res").children[index + 1];
-          const listElement = document.getElementById("res").children[index];
-          prevListElement.style.backgroundColor = "";
-          handleMouseOver(listElement);
-          
-        }
+      if (index == -1) {
+        return;
+      } else if (index == 0) {
+        const listElement =
+          document.getElementById("resultList").children[index];
+        listElement.style.backgroundColor = "";
+        index = -1;
+        return;
+      } else {
+        console.log(index);
+        index = index - 1;
+        const prevListElement =
+          document.getElementById("resultList").children[index + 1];
+        const listElement =
+          document.getElementById("resultList").children[index];
+        prevListElement.style.backgroundColor = "";
+        handleMouseOver(listElement);
       }
     }
-  
+  };
+
   return (
     <div className="flex flex-col">
       <div ref={ref}>
@@ -91,7 +91,7 @@ const SearchField = () => {
         {isShown && results.length > 0 && (
           <div
             className="mt-4  bg-slate-800/90 rounded-lg list-none p-4 absolute w-[219px]"
-            id="res"
+            id="resultList"
           >
             {results.map((result) => (
               <li
