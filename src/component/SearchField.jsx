@@ -71,10 +71,8 @@ const SearchField = () => {
       if (index == -1) {
         return;
       }
-      console.log(index);
       navigate(`#${results[index]}`);
       handlerResultClick(results[index]);
-      // console.log(results[index])
     }
   };
 
