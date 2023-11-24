@@ -1,11 +1,11 @@
 import Search from "./Search";
 import { GlobalContext } from "../store/store";
-import { useContext, useState, } from "react";
+import { useContext, useState } from "react";
 import useSearch from "../hooks/useSearch";
 import findParent from "../utils/findParent";
 import useOutsideClick from "../hooks/useOutSideClick";
 import useKeyboard from "../hooks/useKeyboard";
-import { Link,useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SearchField = () => {
   const { parent, handleParentClick } = useContext(GlobalContext);
@@ -14,7 +14,7 @@ const SearchField = () => {
   const ref = useOutsideClick(() => {
     setIsShown(false);
   });
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const inputRef = useKeyboard();
 
   const handlerResultClick = (result) => {
@@ -25,58 +25,58 @@ const SearchField = () => {
     }
   };
   const handleMouseOver = (event) => {
-    console.log(index);
     if (event.nodeName == "LI") {
       event.style.backgroundColor = "rgb(148,163,184)";
     }
   };
   const handleMouseOut = (event) => {
-    console.log(event);
     event.style.backgroundColor = "";
   };
   let index = -1;
   const handleKeyDown = (event) => {
+
     if (event.code == "ArrowDown") {
       if (index == results.length - 1) {
         return;
-      } else if (index == -1) {
-        index = 0;
-        const listElement = document.getElementById("resultList").children[0];
-        handleMouseOver(listElement);
       } else {
-        index = index + 1;
-        const prevListElement =
-          document.getElementById("resultList").children[index - 1];
         const listElement =
+          document.getElementById("resultList").children[index+1];
+        const prevListElement =
           document.getElementById("resultList").children[index];
-        prevListElement.style.backgroundColor = "";
-        handleMouseOver(listElement);
+        if (index == -1) {
+          handleMouseOver(listElement);
+        } else {
+          handleMouseOut(prevListElement)
+          handleMouseOver(listElement);
+        }
       }
+      index = index + 1
     } else if (event.code == "ArrowUp") {
       if (index == -1) {
         return;
-      } else if (index == 0) {
-        const listElement =
-          document.getElementById("resultList").children[index];
-        listElement.style.backgroundColor = "";
-        index = -1;
-        return;
       } else {
-        console.log(index);
-        index = index - 1;
-        const prevListElement =
-          document.getElementById("resultList").children[index + 1];
         const listElement =
+          document.getElementById("resultList").children[index - 1];
+        listElement.style.backgroundColor = "";
+        const prevListElement =
           document.getElementById("resultList").children[index];
-        prevListElement.style.backgroundColor = "";
-        handleMouseOver(listElement);
+        if (index == 0) {
+          index = -1;
+          handleMouseOut(prevListElement);
+        } else {
+          index = index - 1;
+          const prevListElement = (prevListElement.style.backgroundColor = "");
+          handleMouseOver(listElement);
+        }
       }
     } else if (event.keyCode == 13) {
-        console.log(index)
-        navigate(`#${results[index]}`)
-        handlerResultClick(results[index])
-        // console.log(results[index])
-        
+      if (index == -1) {
+        return;
+      }
+      console.log(index);
+      navigate(`#${results[index]}`);
+      handlerResultClick(results[index]);
+      // console.log(results[index])
     }
   };
 
