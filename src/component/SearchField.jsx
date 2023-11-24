@@ -57,17 +57,15 @@ const SearchField = () => {
       } else {
         const listElement =
           document.getElementById("resultList").children[index - 1];
-        listElement.style.backgroundColor = "";
         const prevListElement =
           document.getElementById("resultList").children[index];
         if (index == 0) {
-          index = -1;
           handleMouseOut(prevListElement);
         } else {
-          index = index - 1;
-          const prevListElement = (prevListElement.style.backgroundColor = "");
+          handleMouseOut(prevListElement)
           handleMouseOver(listElement);
         }
+        index = index - 1
       }
     } else if (event.keyCode == 13) {
       if (index == -1) {
