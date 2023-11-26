@@ -16,6 +16,7 @@ const SearchField = () => {
   });
   const navigate = useNavigate();
   const inputRef = useKeyboard();
+  let index = -1;
 
   const handlerResultClick = (result) => {
     setSearchToken("");
@@ -24,17 +25,18 @@ const SearchField = () => {
       handleParentClick(parentName);
     }
   };
+  
   const handleMouseOver = (event) => {
     if (event.nodeName == "LI") {
       event.style.backgroundColor = "rgb(148,163,184)";
     }
   };
+
   const handleMouseOut = (event) => {
     event.style.backgroundColor = "";
   };
-  let index = -1;
+  
   const handleKeyDown = (event) => {
-
     if (event.code == "ArrowDown") {
       if (index == results.length - 1) {
         return;
