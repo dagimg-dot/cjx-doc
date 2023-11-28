@@ -1,19 +1,22 @@
 import Search from "./Search";
 import { GlobalContext } from "../store/store";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect,useRef } from "react";
 import useSearch from "../hooks/useSearch";
 import findParent from "../utils/findParent";
 import useOutsideClick from "../hooks/useOutSideClick";
 import useKeyboard from "../hooks/useKeyboard";
 import { Link, useNavigate } from "react-router-dom";
+import e from "cors";
 
 const SearchField = () => {
   const { parent, handleParentClick } = useContext(GlobalContext);
   const [results, searchToken, setSearchToken] = useSearch();
   const [isShown, setIsShown] = useState(true);
+  const [isMouseOver, setIsMouseOver] = useState(false);
   const ref = useOutsideClick(() => {
     setIsShown(false);
   });
+  const resultListRef = useRef(null)
   const navigate = useNavigate();
   const inputRef = useKeyboard();
   let index = -1;
@@ -25,20 +28,42 @@ const SearchField = () => {
       handleParentClick(parentName);
     }
   };
-  
+  const handleKeyboardOver = (target) => {
+    target.style.backgroundColor = "rgb(148,163,184)";
+  };
+  const handleKeyboardOut = (target) => {
+    target.style.backgroundColor = "";
+  };
+
   const handleMouseOver = (event) => {
-    if (event.nodeName == "LI") {
+      if(event.nodeName !== "LI") {
+        if(index !== -1) {
+          setIsMouseOver(true)
+          const prevListElement =
+          document.getElementById("resultList").children[index];
+          index = -1
+          handleKeyboardOut(prevListElement)
+        }
+        event = event.parentNode
+        event.style.backgroundColor = "rgb(148,163,184)";
+      }
       event.style.backgroundColor = "rgb(148,163,184)";
-    }
+    
   };
 
   const handleMouseOut = (event) => {
+    if(event.nodeName !== "LI") {
+      console.log(isMouseOver)
+      setIsMouseOver(false)
+      event = event.parentNode
+      event.style.backgroundColor = "";
+    }
     event.style.backgroundColor = "";
   };
   
   const handleKeyDown = (event) => {
-    if (event.code == "ArrowDown") {
-      if (index == results.length - 1) {
+    if (event.code == "ArrowDown" && isMouseOver!==true) {
+      if (index == results.length - 1 ) {
         return;
       } else {
         const listElement =
@@ -46,14 +71,14 @@ const SearchField = () => {
         const prevListElement =
           document.getElementById("resultList").children[index];
         if (index == -1) {
-          handleMouseOver(listElement);
+          handleKeyboardOver(listElement);
         } else {
-          handleMouseOut(prevListElement)
-          handleMouseOver(listElement);
+          handleKeyboardOut(prevListElement)
+          handleKeyboardOver(listElement);
         }
       }
       index = index + 1
-    } else if (event.code == "ArrowUp") {
+    } else if (event.code == "ArrowUp" && isMouseOver!==true) {
       if (index == -1) {
         return;
       } else {
@@ -62,10 +87,10 @@ const SearchField = () => {
         const prevListElement =
           document.getElementById("resultList").children[index];
         if (index == 0) {
-          handleMouseOut(prevListElement);
+          handleKeyboardOut(prevListElement);
         } else {
-          handleMouseOut(prevListElement)
-          handleMouseOver(listElement);
+          handleKeyboardOut(prevListElement)
+          handleKeyboardOver(listElement);
         }
         index = index - 1
       }
@@ -96,15 +121,15 @@ const SearchField = () => {
         {isShown && results.length > 0 && (
           <div
             className="mt-4  bg-slate-800/90 rounded-lg list-none p-4 absolute w-[219px]"
-            id="resultList"
+            id="resultList" ref={resultListRef}
           >
             {results.map((result) => (
               <li
                 key={result}
-                className="hover:bg-slate-400 cursor-pointer p-2 rounded-md"
+                className=" cursor-pointer p-2 rounded-md"
                 onClick={() => handlerResultClick(result)}
-                onMouseOut={(event) => handleMouseOut(event.target)}
                 onMouseOver={(event) => handleMouseOver(event.target)}
+                onMouseOut={(event) => handleMouseOut(event.target)}
               >
                 <Link to={"#" + result}>{result}</Link>
               </li>
