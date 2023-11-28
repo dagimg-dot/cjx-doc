@@ -33,8 +33,8 @@ const SearchField = () => {
     target.style.backgroundColor = "";
   };
 
-  const handleMouseOver = (event) => {
-      if(event.nodeName !== "LI") {
+  const handleMouseOver = (target) => {
+      if(target.nodeName !== "LI") {
         if(index !== -1) {
           setIsMouseOver(true)
           const prevListElement =
@@ -42,21 +42,21 @@ const SearchField = () => {
           handleKeyboardOut(prevListElement)
           index = -1
         }
-        event = event.parentNode
-        event.style.backgroundColor = "rgb(148,163,184)";
+        target = target.parentNode
+        target.style.backgroundColor = "rgb(148,163,184)";
       }
-      event.style.backgroundColor = "rgb(148,163,184)";
+      target.style.backgroundColor = "rgb(148,163,184)";
     
   };
 
-  const handleMouseOut = (event) => {
-    if(event.nodeName !== "LI") {
+  const handleMouseOut = (target) => {
+    if(target.nodeName !== "LI") {
       console.log(isMouseOver)
       setIsMouseOver(false)
-      event = event.parentNode
-      event.style.backgroundColor = "";
+      target = target.parentNode
+      target.style.backgroundColor = "";
     }
-    event.style.backgroundColor = "";
+    target.style.backgroundColor = "";
   };
   
   const handleKeyDown = (event) => {
