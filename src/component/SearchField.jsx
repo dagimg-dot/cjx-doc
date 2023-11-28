@@ -15,7 +15,6 @@ const SearchField = () => {
   const ref = useOutsideClick(() => {
     setIsShown(false);
   });
-  const resultListRef = useRef(null)
   const navigate = useNavigate();
   const inputRef = useKeyboard();
   let index = -1;
@@ -40,8 +39,8 @@ const SearchField = () => {
           setIsMouseOver(true)
           const prevListElement =
           document.getElementById("resultList").children[index];
-          index = -1
           handleKeyboardOut(prevListElement)
+          index = -1
         }
         event = event.parentNode
         event.style.backgroundColor = "rgb(148,163,184)";
@@ -120,7 +119,7 @@ const SearchField = () => {
         {isShown && results.length > 0 && (
           <div
             className="mt-4  bg-slate-800/90 rounded-lg list-none p-4 absolute w-[219px]"
-            id="resultList" ref={resultListRef}
+            id="resultList" 
           >
             {results.map((result) => (
               <li
