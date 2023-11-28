@@ -1,12 +1,11 @@
 import Search from "./Search";
 import { GlobalContext } from "../store/store";
-import { useContext, useState, useEffect,useRef } from "react";
+import { useContext, useState } from "react";
 import useSearch from "../hooks/useSearch";
 import findParent from "../utils/findParent";
 import useOutsideClick from "../hooks/useOutSideClick";
 import useKeyboard from "../hooks/useKeyboard";
 import { Link, useNavigate } from "react-router-dom";
-import e from "cors";
 
 const SearchField = () => {
   const { parent, handleParentClick } = useContext(GlobalContext);
