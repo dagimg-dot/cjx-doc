@@ -15,19 +15,19 @@ const SideNavBar = () => {
     setIsOpen(!isOpen)
   }  
   return (
-    <div className='flex flex-col h-screen w-1/2'>
+    <div className='flex flex-col '>
         {!isOpen ?
         <Hamburger onClick={onClick}/> :
-        <div className='flex flex-col'>
-               <div>
+        <div className='flex flex-col h-screen w-1/2 justify-between fixed left-0 top-0 bg-bodyGradient z-20 px-5'>
+          <div className='mb-20 mt-10'>
             <li className="list-none ">
               <Link to="/">
                 <img src={logo} className="w-12 h-12" />
               </Link>
             </li>
           </div>
-          <div className={`flex flex-col py-3 `}>
-            <li className=" list-none px-3">
+          <div className={`flex flex-col pb-64 `}>
+            <li className=" list-none pb-5 px-3">
               <Link
                 to="/docs"
                 className="text-header-white tracking-[1.5px] relative nav-bar "
@@ -44,7 +44,7 @@ const SideNavBar = () => {
               </Link>
             </li>
           </div>
-          <div className="flex py-3 px-5  gap-5">
+          <div className="flex pb-16 px-5  gap-5">
             {isDocPage && <SearchField />}
             <li className="list-none">
               <a
