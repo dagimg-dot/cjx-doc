@@ -15,8 +15,7 @@ const useSearch = () => {
       if (searchToken !== "") {
         docPagesList.forEach((page) => {
           if (
-            lowerCase(page).includes(lowerCase(searchToken)) &&
-            !newResult.includes(page)
+            lowerCase(page).includes(lowerCase(searchToken)) 
           ) {
             newResult.push(page);
           }

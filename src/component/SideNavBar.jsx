@@ -1,36 +1,33 @@
-import { FaGithub } from "react-icons/fa";
+import { useState } from 'react'
 import { Link, useLocation } from "react-router-dom";
-import logo from "../assets/image/cjx-logo.png";
-import "typeface-poppins";
-import "../css/NavigationBarHover.css";
+import Hamburger from './Hamburger'
 import { PAGES } from "../utils/types";
 import SearchField from "./SearchField";
-import SideNavBar from "./SideNavBar";
-import { useEffect,useState } from "react";
+import logo from "../assets/image/cjx-logo.png";
+import { FaGithub } from "react-icons/fa";
 
-const NavigationBar = () => {
-  const [isTabletWidth,setTabletWidth] = useState(false)
+const SideNavBar = () => {
+  const [isOpen, setIsOpen] = useState(false)
   const { pathname } = useLocation();
   const isDocPage = pathname.split("/").pop() === PAGES.DOCS;
   const paddingLeft = isDocPage ? "pl-56" : "";
-  useEffect(()=> {
-    console.log(window.innerWidth)
-    if(window.innerWidth<=640)
-      setTabletWidth(!isTabletWidth)
-  },[window.innerWidth])
+  const onClick = () => {
+    setIsOpen(!isOpen)
+  }  
   return (
-    <div>
-      {!isTabletWidth ? (
-        <div className="flex justify-between px-28 minmd:px-8 py-4 bg-header-black text-white font-sans z-50 absolute w-full font-bold text-sm">
-          <div>
+    <div className='flex flex-col '>
+        {!isOpen ?
+        <Hamburger onClick={onClick}/> :
+        <div className='flex flex-col h-screen w-1/2 justify-between fixed left-0 top-0 bg-bodyGradient z-20 px-5'>
+          <div className='mb-20 mt-10'>
             <li className="list-none ">
               <Link to="/">
                 <img src={logo} className="w-12 h-12" />
               </Link>
             </li>
           </div>
-          <div className={`flex py-3 items-center ${paddingLeft}`}>
-            <li className="mx-auto list-none px-3">
+          <div className={`flex flex-col pb-64 `}>
+            <li className=" list-none pb-5 px-3">
               <Link
                 to="/docs"
                 className="text-header-white tracking-[1.5px] relative nav-bar "
@@ -38,7 +35,7 @@ const NavigationBar = () => {
                 DOCS<span className=""></span>
               </Link>
             </li>
-            <li className="mx-auto list-none px-3">
+            <li className=" list-none px-3">
               <Link
                 to="/contact"
                 className="text-header-white tracking-[1.5px] relative nav-bar"
@@ -47,7 +44,7 @@ const NavigationBar = () => {
               </Link>
             </li>
           </div>
-          <div className="flex py-3 px-5 items-center gap-5">
+          <div className="flex pb-16 px-5  gap-5">
             {isDocPage && <SearchField />}
             <li className="list-none">
               <a
@@ -59,12 +56,11 @@ const NavigationBar = () => {
               </a>
             </li>
           </div>
-        </div>
-      ) : (
-        <SideNavBar />
-      )}
     </div>
-  );
-};
+        }
+    </div>
 
-export default NavigationBar;
+  )
+}
+
+export default SideNavBar
