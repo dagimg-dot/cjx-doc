@@ -34,8 +34,9 @@ export default {
       maxmd: { max: "961px" },
       minmd: { max: "891px" },
       smd: { max: "792px"},
-      maxsm: { max: "656px"},
-      mdsm: { max: "616px"}
+      maxsm: { max: "639px"},
+      mdsm: { max: "616px"},
+
     },
   },
   plugins: [],
