@@ -3,7 +3,7 @@ import Features from "./Features";
 
 const MoreInfo = () => {
   return (
-    <div className="grid grid-cols-2 gap-24 px-20 text-custom-pink pt-10  mimd:grid-cols-1 mimd:place-items-center">
+    <div className="grid grid-cols-2 gap-24 px-20 text-custom-pink pt-10  mimd:grid-cols-1 mimd:place-items-center maxsm:px-5">
       <div>
         <p
           className="font-sans text-[52px] font-bold tracking-[-3px] py-5"
