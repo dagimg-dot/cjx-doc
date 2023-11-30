@@ -55,7 +55,7 @@ const SideNavBar = () => {
               </li>
             </div>
           </div>
-          <div className="w-1/2" onClick={onClick}></div>
+          <div className="w-1/2 bg-white/30" onClick={onClick}></div>
         </div>
       )}
     </div>
