@@ -35,7 +35,9 @@ export default {
       minmd: { max: "891px" },
       smd: { max: "792px"},
       maxsm: { max: "639px"},
-      mdsm: { max: "616px"},
+      mdsm: { max: "580px"},
+      mism: { max: "526px"},
+      xsm: {max: "455px"}
 
     },
   },
