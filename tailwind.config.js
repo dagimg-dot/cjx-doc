@@ -37,7 +37,8 @@ export default {
       maxsm: { max: "639px"},
       mdsm: { max: "580px"},
       mism: { max: "526px"},
-      xsm: {max: "455px"}
+      xsm: {max: "455px"},
+      xxsm: {max: "380px"}
 
     },
   },
