@@ -23,7 +23,7 @@ const NavigationBar = () => {
             </Link>
           </li>
         </div>
-        <div className={`flex py-3 items-center ${paddingLeft}`}>
+        <div className={`flex py-3 items-center maxmd:pl-12 ${paddingLeft}`}>
           <li className="mx-auto list-none px-3">
             <Link
               to="/docs"
