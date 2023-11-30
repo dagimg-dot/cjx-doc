@@ -16,7 +16,7 @@ const SideNavBar = () => {
     <div className="flex flex-col">
       <Hamburger onClick={onClick} />
       {isOpen && (
-        <div className="flex h-screen w-full justify-between fixed left-0 top-0 z-20">
+        <div className="h-screen w-full justify-between fixed left-0 top-0 z-20 hidden mdsm:flex">
           <div className="flex flex-col bg-bodyGradient w-1/2 px-5 pt-5">
             <div className="flex-grow">
               <div className="">
