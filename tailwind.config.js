@@ -30,6 +30,7 @@ export default {
       },
     },
     screens: {
+      maxx: { max: "1210px" },
       mimd: { max: "1110px" },
       maxmd: { max: "961px" },
       minmd: { max: "891px" },
