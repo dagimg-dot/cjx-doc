@@ -38,7 +38,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="grid lg:grid-cols-2 md:grid-cols-1 max-lg:gap-10 px-16 py-6">
-            <div className="flex flex-col items-center justify-center text-header-white gap-3 max-lg:order-last">
+            <div className="flex flex-col items-center justify-center text-header-white gap-3 max-lg:order-last  minmd:-order-first">
               <Socials {...dagim_socials} />
               <h2>Software Developer</h2>
               <h2>Student at BiT</h2>
