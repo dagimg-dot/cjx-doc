@@ -15,7 +15,7 @@ const Bash = () => {
 
   return (
     <Terminal style={"w-full h-[350px] xsm:h-[300px] "}>
-      <p className="text-sm tracking-[1.5px] mt-[1.5px] mism:tracking-[1px]">{`${displayedCommand}`}</p>
+      <p className="text-sm tracking-[1.5px] mt-[1.5px] mism:tracking-[1px] xsm:text-xs">{`${displayedCommand}`}</p>
     </Terminal>
   );
 };
