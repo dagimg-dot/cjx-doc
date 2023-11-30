@@ -17,42 +17,43 @@ const SideNavBar = () => {
       <Hamburger onClick={onClick} />
       {isOpen && (
         <div className="flex h-screen w-full justify-between fixed left-0 top-0 z-20">
-          <div className="bg-bodyGradient w-1/2 px-5">
-            <div className="mb-20 mt-10">
-              <li className="list-none ">
-                <Link to="/">
-                  <img src={logo} className="w-12 h-12" />
-                </Link>
-              </li>
+          <div className="flex flex-col bg-bodyGradient w-1/2 px-5 pt-5">
+            <div className="flex-grow">
+              <div className="">
+                <li className="list-none">
+                  <Link to="/">
+                    <img src={logo} className="w-12 h-12" />
+                  </Link>
+                </li>
+              </div>
+              <div className="flex flex-col mt-14 gap-4">
+                <li className="list-none">
+                  <Link
+                    to="/docs"
+                    className="text-header-white tracking-[1.5px] relative nav-bar "
+                  >
+                    DOCS
+                  </Link>
+                </li>
+                <li className="list-none">
+                  <Link
+                    to="/contact"
+                    className="text-header-white tracking-[1.5px] relative nav-bar"
+                  >
+                    CONTACT
+                  </Link>
+                </li>
+              </div>
             </div>
-            <div className={`flex flex-col pb-64 `}>
-              <li className=" list-none pb-5 px-3">
-                <Link
-                  to="/docs"
-                  className="text-header-white tracking-[1.5px] relative nav-bar "
-                >
-                  DOCS<span className=""></span>
-                </Link>
-              </li>
-              <li className=" list-none px-3">
-                <Link
-                  to="/contact"
-                  className="text-header-white tracking-[1.5px] relative nav-bar"
-                >
-                  CONTACT<span className=""></span>
-                </Link>
-              </li>
-            </div>
-            <div className="flex pb-16 px-5  gap-5">
-              <li className="list-none">
-                <a
-                  href="https://github.com/dagimg-dot/cjx-cli-tool"
-                  target={"_blank"}
-                  title={"Github Link"}
-                >
-                  <FaGithub className="scale-[2]" />
-                </a>
-              </li>
+            <div className="flex gap-4 items-center pl-4 py-4 border-2 rounded-lg mb-6 border-custom-pink text-custom-pink">
+              <a
+                href="https://github.com/dagimg-dot/cjx-cli-tool"
+                target={"_blank"}
+                title={"Github Link"}
+              >
+                <FaGithub className="scale-[2] " />
+              </a>
+              <div>9 Stars ⭐</div>
             </div>
           </div>
           <div className="w-1/2 bg-white/30" onClick={onClick}></div>
