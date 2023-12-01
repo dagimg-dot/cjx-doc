@@ -1,22 +1,12 @@
-import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import Hamburger from "./Hamburger";
-import { PAGES } from "../utils/types";
+import { Link } from "react-router-dom";
 import logo from "../assets/image/cjx-logo.png";
 import { FaGithub } from "react-icons/fa";
 
-const SideNavBar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const onClick = () => {
-    setIsOpen(!isOpen);
-  };
-
+const SideNavBar = ({ onClick, isOpen }) => {
   return (
     <div className="flex flex-col">
-      <Hamburger onClick={onClick} />
       {isOpen && (
-        <div className="h-screen w-full justify-between fixed left-0 top-0 z-20 hidden mdsm:flex">
+        <div className="flex h-screen w-full justify-between fixed left-0 top-0 z-20">
           <div className="flex flex-col bg-bodyGradient w-1/2 px-5 pt-5">
             <div className="flex-grow">
               <div className="">
@@ -26,20 +16,14 @@ const SideNavBar = () => {
                   </Link>
                 </li>
               </div>
-              <div className="flex flex-col mt-14 gap-4">
+              <div className="flex flex-col mt-14 gap-4 text-header-white tracking-[1.5px]">
                 <li className="list-none">
-                  <Link
-                    to="/docs"
-                    className="text-header-white tracking-[1.5px] relative nav-bar "
-                  >
+                  <Link to="/docs" className="relative nav-bar ">
                     DOCS
                   </Link>
                 </li>
                 <li className="list-none">
-                  <Link
-                    to="/contact"
-                    className="text-header-white tracking-[1.5px] relative nav-bar"
-                  >
+                  <Link to="/contact" className="relative nav-bar">
                     CONTACT
                   </Link>
                 </li>
