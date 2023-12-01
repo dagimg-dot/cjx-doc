@@ -21,7 +21,7 @@ const MoreInfo = () => {
           <Features />
         </div>
       </div>
-      <div className="px-10 mimd:w-3/4 mdsm:px-5 mism:px-0 xsm:w-full xsm:px-5">
+      <div className="px-10 mimd:w-3/4 midsm:px-5 mism:px-0 xsm:w-full xsm:px-5 xxsm:px-2">
       <Bash />
       </div>
     </div>
