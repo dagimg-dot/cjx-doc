@@ -42,9 +42,8 @@ const SearchField = () => {
         index = -1
       }
       target = target.parentNode
-      target.style.backgroundColor = "rgb(148,163,184)";
-      setIsMouseOver(true)
     }
+    setIsMouseOver(true)
     target.style.backgroundColor = "rgb(148,163,184)";
     
   };
