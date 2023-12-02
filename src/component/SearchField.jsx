@@ -34,7 +34,6 @@ const SearchField = () => {
   };
   
   const handleMouseOver = (target) => {
-    console.log(index)
     if(target.nodeName !== "LI") {
       if(index !== -1) {
         console.log('what is happening')
