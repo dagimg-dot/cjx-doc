@@ -32,27 +32,28 @@ const SearchField = () => {
   const handleKeyboardOut = (target) => {
     target.style.backgroundColor = "";
   };
-
+  
   const handleMouseOver = (target) => {
-      if(target.nodeName !== "LI") {
-        if(index !== -1) {
-          setIsMouseOver(true)
-          const prevListElement =
-          document.getElementById("resultList").children[index];
-          handleKeyboardOut(prevListElement)
-          index = -1
-        }
-        target = target.parentNode
-        target.style.backgroundColor = "rgb(148,163,184)";
+    console.log(index)
+    if(target.nodeName !== "LI") {
+      if(index !== -1) {
+        console.log('what is happening')
+        const prevListElement =
+        document.getElementById("resultList").children[index];
+        handleKeyboardOut(prevListElement)
+        // index = -1
       }
+      target = target.parentNode
       target.style.backgroundColor = "rgb(148,163,184)";
+      setIsMouseOver(true)
+    }
+    target.style.backgroundColor = "rgb(148,163,184)";
     
   };
-
+  
   const handleMouseOut = (target) => {
+    setIsMouseOver(false)
     if(target.nodeName !== "LI") {
-      console.log(isMouseOver)
-      setIsMouseOver(false)
       target = target.parentNode
       target.style.backgroundColor = "";
     }
