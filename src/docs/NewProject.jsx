@@ -24,7 +24,7 @@ const NewProject = () => {
       <SecondaryHeading>2. Advanced FXML Project</SecondaryHeading>
       <p className="mb-3">
         This kind of project is a more advanced one and it contains{" "}
-        <code>.fxml</code> files which are essentially for creating the view of
+        <code>.fxml</code> files which are essential for creating the view of
         JavaFX projects.
       </p>
       <p>
