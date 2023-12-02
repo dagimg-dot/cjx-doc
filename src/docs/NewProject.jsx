@@ -12,7 +12,7 @@ const NewProject = () => {
       <p className="mb-3">
         The word <code>Simple</code> refers a straightforward JavaFX project.
         This means the project only contains <code>.java</code> files and you
-        are about to hard code all the views using java only 😁.
+        are about to hard code all the views using java only .
       </p>
       <p>
         To create simple project, you can use the{" "}
