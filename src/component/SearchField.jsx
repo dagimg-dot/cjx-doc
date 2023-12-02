@@ -36,7 +36,6 @@ const SearchField = () => {
   const handleMouseOver = (target) => {
     if(target.nodeName !== "LI") {
       if(index !== -1) {
-        console.log('what is happening')
         const prevListElement =
         document.getElementById("resultList").children[index];
         handleKeyboardOut(prevListElement)
