@@ -32,49 +32,48 @@ const SearchField = () => {
   const handleKeyboardOut = (target) => {
     target.style.backgroundColor = "";
   };
-  
+
   const handleMouseOver = (target) => {
-    if(target.nodeName !== "LI") {
-      if(index !== -1) {
+    if (target.nodeName !== "LI") {
+      if (index !== -1) {
         const prevListElement =
-        document.getElementById("resultList").children[index];
-        handleKeyboardOut(prevListElement)
-        index = -1
+          document.getElementById("resultList").children[index];
+        handleKeyboardOut(prevListElement);
+        index = -1;
       }
-      target = target.parentNode
+      target = target.parentNode;
     }
-    setIsMouseOver(true)
+    setIsMouseOver(true);
     target.style.backgroundColor = "rgb(148,163,184)";
-    
   };
-  
+
   const handleMouseOut = (target) => {
-    setIsMouseOver(false)
-    if(target.nodeName !== "LI") {
-      target = target.parentNode
+    setIsMouseOver(false);
+    if (target.nodeName !== "LI") {
+      target = target.parentNode;
       target.style.backgroundColor = "";
     }
     target.style.backgroundColor = "";
   };
-  
+
   const handleKeyDown = (event) => {
-    if (event.code == "ArrowDown" && isMouseOver!==true) {
-      if (index == results.length - 1 ) {
+    if (event.code == "ArrowDown" && isMouseOver !== true) {
+      if (index == results.length - 1) {
         return;
       } else {
         const listElement =
-          document.getElementById("resultList").children[index+1];
+          document.getElementById("resultList").children[index + 1];
         const prevListElement =
           document.getElementById("resultList").children[index];
         if (index == -1) {
           handleKeyboardOver(listElement);
         } else {
-          handleKeyboardOut(prevListElement)
+          handleKeyboardOut(prevListElement);
           handleKeyboardOver(listElement);
         }
       }
-      index = index + 1
-    } else if (event.code == "ArrowUp" && isMouseOver!==true) {
+      index = index + 1;
+    } else if (event.code == "ArrowUp" && isMouseOver !== true) {
       if (index == -1) {
         return;
       } else {
@@ -85,10 +84,10 @@ const SearchField = () => {
         if (index == 0) {
           handleKeyboardOut(prevListElement);
         } else {
-          handleKeyboardOut(prevListElement)
+          handleKeyboardOut(prevListElement);
           handleKeyboardOver(listElement);
         }
-        index = index - 1
+        index = index - 1;
       }
     } else if (event.keyCode == 13) {
       if (index == -1) {
@@ -115,10 +114,10 @@ const SearchField = () => {
             onKeyDown={(event) => handleKeyDown(event)}
           />
         </div>
-        {isShown && results.length > 0 && (
+        {isShown && results.length > 0 ? (
           <div
             className="mt-4  bg-slate-800/90 rounded-lg list-none p-4 absolute w-[219px]"
-            id="resultList" 
+            id="resultList"
           >
             {results.map((result) => (
               <li
@@ -132,6 +131,13 @@ const SearchField = () => {
               </li>
             ))}
           </div>
+        ) : (
+          searchToken &&
+          isShown && (
+            <li className="rounded-lg list-none p-4 absolute bg-slate-800/90 w-[219px] mt-4">
+              No result found
+            </li>
+          )
         )}
       </div>
     </div>
