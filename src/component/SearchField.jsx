@@ -40,7 +40,7 @@ const SearchField = () => {
         const prevListElement =
         document.getElementById("resultList").children[index];
         handleKeyboardOut(prevListElement)
-        // index = -1
+        index = -1
       }
       target = target.parentNode
       target.style.backgroundColor = "rgb(148,163,184)";
