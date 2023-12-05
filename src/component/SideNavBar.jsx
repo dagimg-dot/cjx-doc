@@ -9,7 +9,7 @@ const SideNavBar = ({ onClick, isOpen }) => {
         <div className="flex h-screen w-full justify-between fixed left-0 top-0 z-20">
           <div className="flex flex-col bg-bodyGradient w-1/2 px-5 pt-5">
             <div className="flex-grow">
-              <div className="">
+              <div>
                 <li className="list-none">
                   <Link to="/">
                     <img src={logo} className="w-12 h-12" />

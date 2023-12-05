@@ -34,6 +34,7 @@ export default {
       md: "768px",
       lg: "1024px",
       xl: "1280px",
+      maxx: { max: "1210px" },
       mimd: { max: "1110px" },
       maxmd: { max: "961px" },
       minmd: { max: "891px" },
