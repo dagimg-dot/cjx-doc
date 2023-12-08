@@ -104,7 +104,7 @@ const SearchField = () => {
   return (
     <div className="flex flex-col">
       <div ref={ref}>
-        <div className="search-field flex items-center gap-2 text-white text-sm font-normal py-1 px-2 border-2 border-lime-500 from-amber-800 to-yellow-500 rounded-lg">
+        <div className="flex items-center gap-2 text-white text-sm font-normal py-1 px-2 border-2 border-lime-500 from-amber-800 to-yellow-500 rounded-lg">
           <Search />
           <input
             type="text"
