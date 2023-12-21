@@ -4,7 +4,7 @@ import Socials from "../component/Socials";
 import Default from "../layout/Default";
 
 const Contact = () => {
-  const emri_socials = {
+  const ermi_socials = {
     gh: "https://github.com/jeremi-code",
     li: "https://linkedin.com/in/ermias-sintayehu-03955224b/",
     ig: "https://instagram.com/jeremiah_ii",
@@ -32,7 +32,7 @@ const Contact = () => {
               <h1>Ermias S. Deresse</h1>
             </div>
             <div className="flex flex-col items-center justify-center text-header-white gap-3">
-              <Socials {...emri_socials} />
+              <Socials {...ermi_socials} />
               <h2>Software Developer</h2>
               <h2>Student at BiT</h2>
             </div>
