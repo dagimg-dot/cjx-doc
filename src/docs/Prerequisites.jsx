@@ -1,5 +1,5 @@
 import { prerequisiteLinks } from "../utils/data";
-import Check from "../component/Check";
+import Check from "../component/Icons/Check";
 import { Link } from "react-router-dom";
 import MainHeading from "../component/DocComponent/MainHeading";
 import SecondaryHeading from "../component/DocComponent/SecondaryHeading";

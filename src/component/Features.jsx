@@ -1,5 +1,5 @@
 import { features } from "../utils/data";
-import Check from "./Check";
+import Check from "./Icons/Check";
 
 const Features = () => {
   return (

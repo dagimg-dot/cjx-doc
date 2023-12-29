@@ -1,5 +1,5 @@
 import Submenu from "./Submenu";
-import { ChevronDown, ChevronRight } from "./Chevron";
+import { ChevronDown, ChevronRight } from "./Icons/Chevron";
 import { GlobalContext } from "../store/store";
 import { useContext } from "react";
 import useHash from "../hooks/useHash";

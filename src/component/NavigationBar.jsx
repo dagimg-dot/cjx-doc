@@ -6,7 +6,7 @@ import "../css/NavigationBarHover.css";
 import { PAGES } from "../utils/types";
 import SearchField from "./SearchField";
 import SideNavBar from "./SideNavBar";
-import Hamburger from "./Hamburger";
+import Hamburger from "./Icons/Hamburger";
 import { useState } from "react";
 
 const NavigationBar = () => {
