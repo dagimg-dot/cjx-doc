@@ -14,7 +14,3 @@
         @apply rounded-xl
     }
 }
-
-*,::before,::after {
-    border-color : black;
-}
