@@ -5,11 +5,11 @@ const Submenu = ({ submenu_name }) => {
   const [currentPage] = useHash();
   const selectedColor =
     submenu_name === currentPage
-      ? "border-l-2 pl-2 text-[#bcbcbc] border-[#bcbcbc]"
+      ? "pl-2 border-l-2 border-[#bcbcbc] text-[#bcbcbc]"
       : "";
 
   return (
-    <button className={`text-white cursor-pointer block ${selectedColor}`}>
+    <button className={"cursor-pointer block " + selectedColor}>
       <Link to={"#" + submenu_name}>{submenu_name}</Link>
     </button>
   );
