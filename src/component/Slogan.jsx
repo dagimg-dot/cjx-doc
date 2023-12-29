@@ -12,9 +12,7 @@ const Slogan = () => {
       </p>
       <p className="text-[20px] pb-5 pt-3">Get Coding in Minutes!</p>
       <div className="flex gap-4">
-        <Button
-          style={`transition duration-500 ease-in-out bg-gradient-to-r from-amber-800 to-yellow-500 py-2 px-8 hover:bg-gradient-to-r hover:from-yellow-500 hover:to-amber-800`}
-        >
+        <Button style="transition duration-500 ease-in-out bg-gradient-to-r from-amber-800 to-yellow-500 py-2 px-8 hover:bg-gradient-to-r hover:from-yellow-500 hover:to-amber-800">
           Download
         </Button>
         <a
