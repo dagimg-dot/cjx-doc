@@ -13,7 +13,7 @@ const NavigationBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const { pathname } = useLocation();
-  const isDocPage = pathname.split("/").pop() === PAGES.DOCS;
+  const isDocPage = pathname.split("/")[1] === PAGES.DOCS;
 
   const onClick = () => {
     setIsOpen(!isOpen);
