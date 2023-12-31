@@ -1,22 +1,35 @@
 import Submenu from "./Submenu";
 import { ChevronDown, ChevronRight } from "./Icons/Chevron";
 import { GlobalContext } from "../store/store";
-import { useContext } from "react";
-import useHash from "../hooks/useHash";
+import { useContext, useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 const Menu = ({ menu_name }) => {
+  const { pathname } = useLocation();
+  const [isSelected, setIsSelected] = useState(false);
   const { parent, handleParentClick } = useContext(GlobalContext);
 
-  const isSelected = parent[menu_name].isSelected;
   const children = Object.keys(parent[menu_name].children);
 
-  useHash();
+  const cleanStr = (str) => {
+    if (str.split("").includes("-")) {
+      return str.replace(/-/g, " ");
+    }
+    return str;
+  };
+
+  useEffect(() => {
+    const category = cleanStr(pathname.split("/")[2]);
+    if (category == menu_name) {
+      setIsSelected(true);
+    }
+  }, [pathname]);
 
   return (
     <>
       <button
         className="flex cursor-pointer gap-3 text-white justify-between items-center py-4 pr-6 "
-        onClick={() => handleParentClick(menu_name)}
+        onClick={() => setIsSelected(!isSelected)}
       >
         <div className="cursor-pointer ">{menu_name}</div>
         <div>{isSelected ? <ChevronDown /> : <ChevronRight />}</div>
