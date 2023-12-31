@@ -1,5 +1,3 @@
-import DocPages from "./docPages";
-
 const features = [
   "initialize a JavaFx project easily",
   "faster development",
@@ -50,6 +48,6 @@ const onThisPageTopics = {
   FAQs: [],
 };
 
-const docPagesList = Object.keys(onThisPageTopics)
+const docPagesList = Object.keys(onThisPageTopics);
 
 export { features, prerequisiteLinks, onThisPageTopics, docPagesList };
