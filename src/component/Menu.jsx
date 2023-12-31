@@ -1,15 +1,14 @@
 import Submenu from "./Submenu";
 import { ChevronDown, ChevronRight } from "./Icons/Chevron";
-import { GlobalContext } from "../store/store";
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import DocPages from "../utils/docPages";
 
 const Menu = ({ menu_name }) => {
   const { pathname } = useLocation();
   const [isSelected, setIsSelected] = useState(false);
-  const { parent, handleParentClick } = useContext(GlobalContext);
 
-  const children = Object.keys(parent[menu_name].children);
+  const children = Object.keys(DocPages[menu_name]);
 
   const cleanStr = (str) => {
     if (str.split("").includes("-")) {
