@@ -1,6 +1,6 @@
 import DocPages from "../utils/docPages";
 import useHash from "../hooks/useHash";
-import { useNavigate } from "react-router-dom";
+import { Routes, Route, useNavigate, Navigate } from "react-router-dom";
 import { docPagesList } from "../utils/data";
 import { useEffect, useState } from "react";
 import Button from "./Button";
@@ -11,6 +11,9 @@ const DocBody = () => {
   const [page, setPage] = useState(currentPage);
   const [isPrevBtnDisabled, setPrevBtnDisabled] = useState(false);
   const [isNextBtnDisabled, setNextBtnDisabled] = useState(false);
+
+  const [firstCategory, firstPages] = Object.entries(DocPages)[0];
+  const [firstPageTitle] = Object.entries(firstPages)[0];
 
   useEffect(() => {
     setPage(currentPage);
@@ -34,7 +37,22 @@ const DocBody = () => {
 
   return (
     <div className="leading-6 flex flex-col justify-between h-full">
-      <div className="flex-grow">{currentDoc}</div>
+      <div>
+        <Routes>
+          {Object.entries(DocPages).map(([category, pages]) =>
+            Object.entries(pages).map(([title, component]) => (
+              <Route
+                key={title}
+                path={`/${category.replace(/\s+/g, "-")}/${title.replace(
+                  /\s+/g,
+                  "-"
+                )}`}
+                element={component}
+              />
+            ))
+          )}
+        </Routes>
+      </div>
       <div className="flex justify-between mr-8 pb-8">
         <Button onClick={handlePrev} disabled={isPrevBtnDisabled}>
           &larr; Prev
