@@ -3,19 +3,13 @@ import { ChevronDown, ChevronRight } from "./Icons/Chevron";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import DocPages from "../utils/docPages";
+import cleanStr from "../utils/cleanStr";
 
 const Menu = ({ menu_name }) => {
   const { pathname } = useLocation();
   const [isSelected, setIsSelected] = useState(false);
 
   const children = Object.keys(DocPages[menu_name]);
-
-  const cleanStr = (str) => {
-    if (str.split("").includes("-")) {
-      return str.replace(/-/g, " ");
-    }
-    return str;
-  };
 
   useEffect(() => {
     const category = cleanStr(pathname.split("/")[2]);
