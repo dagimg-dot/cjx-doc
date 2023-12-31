@@ -1,15 +1,12 @@
-import React from "react";
-import { GlobalContext } from "../store/store";
 import Menu from "./Menu";
-import { useContext } from "react";
+import DocPages from "../utils/docPages";
 
 const LeftSidebar = () => {
-  const { parent } = useContext(GlobalContext);
-  const parents = Object.keys(parent);
+  const categories = Object.keys(DocPages);
 
   return (
     <>
-      {parents.map((menu_item) => (
+      {categories.map((menu_item) => (
         <Menu key={menu_item} menu_name={menu_item} />
       ))}
     </>
