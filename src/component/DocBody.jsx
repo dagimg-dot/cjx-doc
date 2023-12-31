@@ -1,19 +1,18 @@
 import DocPages from "../utils/docPages";
-import useHash from "../hooks/useHash";
-import { Routes, Route, useNavigate, Navigate } from "react-router-dom";
+import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import { docPagesList } from "../utils/data";
 import { useEffect, useState } from "react";
 import Button from "./Button";
+import linkConstructor from "../utils/linkConstructor";
+import cleanStr from "../utils/cleanStr";
 
 const DocBody = () => {
-  const [currentPage] = useHash();
+  const { pathname } = useLocation();
+  const currentPage = cleanStr(pathname.split("/").pop());
   const navigate = useNavigate();
   const [page, setPage] = useState(currentPage);
   const [isPrevBtnDisabled, setPrevBtnDisabled] = useState(false);
   const [isNextBtnDisabled, setNextBtnDisabled] = useState(false);
-
-  const [firstCategory, firstPages] = Object.entries(DocPages)[0];
-  const [firstPageTitle] = Object.entries(firstPages)[0];
 
   useEffect(() => {
     setPage(currentPage);
@@ -21,18 +20,16 @@ const DocBody = () => {
     setNextBtnDisabled(getIndex(currentPage) === docPagesList.length - 1);
   }, [currentPage]);
 
-  const currentDoc = DocPages[page];
-
   const getIndex = (_page = page) => docPagesList.indexOf(_page);
 
   const handlePrev = () => {
     const prevPage = docPagesList[getIndex() - 1];
-    navigate(`#${prevPage}`);
+    navigate(linkConstructor(prevPage));
   };
 
   const handleNext = () => {
     const nextPage = docPagesList[getIndex() + 1];
-    navigate(`#${nextPage}`);
+    navigate(linkConstructor(nextPage));
   };
 
   return (
