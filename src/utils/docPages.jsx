@@ -9,15 +9,25 @@ import Updating from "../docs/Updating";
 import VerifyingSetup from "../docs/VerifyingSetup";
 
 const DocPages = {
-  Prerequisites: <Prerequisites />,
-  "Setting Up the Environment": <SettingUp />,
-  "Verifying Setup": <VerifyingSetup />,
-  "New Project": <NewProject />,
-  "Cloning Projects": <CloneProjects />,
-  "Command Reference": <CommandReference />,
-  "The Updating Process": <Updating />,
-  "Common Problems": <CommonProblems />,
-  FAQs: <FAQs />,
+  "Getting Started": {
+    Prerequisites: <Prerequisites />,
+    "Setting Up The Environment": <SettingUp />,
+    "Verifying Setup": <VerifyingSetup />,
+  },
+  "Working with Projects": {
+    "New Project": <NewProject />,
+    "Cloning Projects": <CloneProjects />,
+  },
+  "CLI Commands": {
+    "Command Reference": <CommandReference />,
+  },
+  "Updating CJX CLI": {
+    "The Updating Process": <Updating />,
+  },
+  Troubleshooting: {
+    "Common Problems": <CommonProblems />,
+    FAQs: <FAQs />,
+  },
 };
 
 export default DocPages;
