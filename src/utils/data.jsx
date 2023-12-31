@@ -20,6 +20,36 @@ const prerequisiteLinks = {
     "https://marketplace.visualstudio.com/items?itemName=bilalekrem.scenebuilderextension",
 };
 
-const docPagesList = Object.keys(DocPages);
+const onThisPageTopics = {
+  Prerequisites: ["Other Programs", "Downloading CJX CLI"],
+  "Setting Up The Environment": [
+    "Initializing CJX",
+    "Specifying JavaFX SDK Path",
+    "Adding CJX CLI to Path",
+  ],
+  "Verifying Setup": [],
+  "New Project": ["Simple JavaFX Project", "Advanced FXML Project"],
+  "Cloning Projects": [],
+  "Command Reference": [
+    "cjx init",
+    "cjx setup",
+    "cjx create",
+    "cjx clone",
+    "cjx doctor",
+  ],
+  "The Updating Process": [
+    "Checking for updates",
+    "Updating CJX",
+    "Verifying CLI Version",
+  ],
+  "Common Problems": [
+    "cjx is not recognised",
+    "cjx sdk path is not set",
+    "For other errors",
+  ],
+  FAQs: [],
+};
 
-export { features, prerequisiteLinks, docPagesList };
+const docPagesList = Object.keys(onThisPageTopics)
+
+export { features, prerequisiteLinks, onThisPageTopics, docPagesList };
