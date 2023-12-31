@@ -1,14 +1,12 @@
 import Search from "./Search";
-import { GlobalContext } from "../store/store";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import useSearch from "../hooks/useSearch";
-import findParent from "../utils/findParent";
 import useOutsideClick from "../hooks/useOutSideClick";
 import useKeyboard from "../hooks/useKeyboard";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import linkConstructor from "../utils/linkConstructor";
 
 const SearchField = () => {
-  const { parent, handleParentClick } = useContext(GlobalContext);
   const [results, searchToken, setSearchToken] = useSearch();
   const [isShown, setIsShown] = useState(true);
   const [isMouseOver, setIsMouseOver] = useState(false);
@@ -19,13 +17,11 @@ const SearchField = () => {
   const inputRef = useKeyboard();
   let index = -1;
 
-  const handlerResultClick = (result) => {
+  const handleResultClick = (result) => {
     setSearchToken("");
-    const { parentName, isSelected } = findParent(parent, result);
-    if (!isSelected) {
-      handleParentClick(parentName);
-    }
+    navigate(linkConstructor(result));
   };
+
   const handleKeyboardOver = (target) => {
     target.style.backgroundColor = "rgb(148,163,184)";
   };
@@ -94,7 +90,7 @@ const SearchField = () => {
         return;
       }
       navigate(`#${results[index]}`);
-      handlerResultClick(results[index]);
+      handleResultClick(results[index]);
     }
   };
 
@@ -123,11 +119,11 @@ const SearchField = () => {
               <li
                 key={result}
                 className=" cursor-pointer p-2 rounded-md"
-                onClick={() => handlerResultClick(result)}
+                onClick={() => handleResultClick(result)}
                 onMouseOver={(event) => handleMouseOver(event.target)}
                 onMouseOut={(event) => handleMouseOut(event.target)}
               >
-                <Link to={"#" + result}>{result}</Link>
+                {result}
               </li>
             ))}
           </div>
