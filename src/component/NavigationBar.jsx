@@ -34,7 +34,7 @@ const NavigationBar = () => {
         <div className={`flex py-3 items-center justify-center mdsm:hidden`}>
           <li className="mx-auto list-none px-3">
             <Link
-              to="/docs"
+              to="/docs/Getting-Started/Prerequisites"
               className="text-header-white tracking-[1.5px] relative nav-bar "
             >
               DOCS<span className=""></span>
