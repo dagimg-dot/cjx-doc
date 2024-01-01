@@ -1,5 +1,8 @@
-import DocPages from "../utils/docPages";
-import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
+import {
+  useNavigate,
+  useLocation,
+  Outlet,
+} from "react-router-dom";
 import { docPagesList } from "../utils/data";
 import { useEffect, useState } from "react";
 import Button from "./Button";
@@ -36,20 +39,7 @@ const DocBody = () => {
   return (
     <div className="leading-6 flex flex-col justify-between h-full">
       <div>
-        <Routes>
-          {Object.entries(DocPages).map(([category, pages]) =>
-            Object.entries(pages).map(([title, component]) => (
-              <Route
-                key={title}
-                path={`/${category.replace(/\s+/g, "-")}/${title.replace(
-                  /\s+/g,
-                  "-"
-                )}`}
-                element={component}
-              />
-            ))
-          )}
-        </Routes>
+        <Outlet />
       </div>
       <div className="flex justify-between mr-8 pb-8">
         <Button onClick={handlePrev} disabled={isPrevBtnDisabled}>
