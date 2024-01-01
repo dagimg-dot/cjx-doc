@@ -10,7 +10,7 @@ const Submenu = ({ submenu_name }) => {
       : "";
 
   return (
-    <button className={"cursor-pointer block " + selectedColor}>
+    <button className={"text-left cursor-pointer block " + selectedColor}>
       <Link to={linkConstructor(submenu_name)}>{submenu_name}</Link>
     </button>
   );

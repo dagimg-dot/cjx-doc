@@ -21,7 +21,7 @@ const Menu = ({ menu_name }) => {
   return (
     <>
       <button
-        className="flex cursor-pointer gap-3 text-white justify-between items-center py-4 pr-6 "
+        className="flex cursor-pointer gap-3 text-white text-left justify-between items-center py-4 pr-6 "
         onClick={() => setIsSelected(!isSelected)}
       >
         <div className="cursor-pointer ">{menu_name}</div>
