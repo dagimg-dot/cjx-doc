@@ -96,12 +96,12 @@ const SearchField = () => {
   return (
     <div className="flex flex-col">
       <div ref={ref}>
-        <div className="flex items-center gap-2 text-white text-sm font-normal py-1 px-2 border-2 border-lime-500 from-amber-800 to-yellow-500 rounded-lg">
+        <div className="flex items-center gap-2 text-white text-sm font-normal py-1 px-2 border-2 border-lime-500 from-amber-800 to-yellow-500 rounded-lg sms:w-[140px]">
           <Search />
           <input
             type="text"
-            placeholder="Search (Ctrl + k)"
-            className="bg-transparent focus:outline-none placeholder:opacity-50 placeholder:text-slate-500"
+            placeholder="Ctrl + k"
+            className="bg-transparent focus:outline-none placeholder:opacity-50 placeholder:text-slate-500 w-full"
             onChange={(event) => setSearchToken(event.target.value)}
             onFocus={() => setIsShown(true)}
             value={searchToken}
@@ -111,7 +111,7 @@ const SearchField = () => {
         </div>
         {isShown && results.length > 0 ? (
           <div
-            className="mt-4  bg-slate-800/90 rounded-lg list-none p-4 absolute w-[219px]"
+            className="mt-4  bg-slate-800/90 rounded-lg list-none p-4 absolute w-[219px] sms:w-[140px]"
             id="resultList"
           >
             {results.map((result) => (
@@ -129,7 +129,7 @@ const SearchField = () => {
         ) : (
           searchToken &&
           isShown && (
-            <li className="rounded-lg list-none p-4 absolute bg-slate-800/90 w-[219px] mt-4">
+            <li className="rounded-lg list-none p-4 absolute bg-slate-800/90 w-[219px] sms:w-[140px] mt-4">
               No result found
             </li>
           )
