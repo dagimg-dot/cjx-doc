@@ -10,7 +10,7 @@ const Home = () => {
           <Hero />
         </Default>
       </div>
-      <div>
+      <div className="pb-48">
         <MoreInfo />
       </div>
     </div>
