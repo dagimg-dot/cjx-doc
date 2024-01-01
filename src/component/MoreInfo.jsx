@@ -14,15 +14,15 @@ const MoreInfo = () => {
         <div className="flex flex-col ">
           <p className="font-consolas leading-6 text-[18px]">
             cjx is a command line tool that lets you setup your javaFX
-            development environment in visual studio code Lorem ipsum dolor sit
-            amet, consectetur adipisicing elit. Nobis ex esse quae harum
-            veritatis. Non numquam repellat quaerat consequatur! Quasi facere
+            development environment in visual studio code. With this tool in
+            your toolkit JavaFX development becomes a breeze. Try and witness it
+            yourself. These are the features it provides:
           </p>
           <Features />
         </div>
       </div>
       <div className="px-10 mimd:w-3/4 midsm:px-5 mism:px-0 xsm:w-full xsm:px-5 xxsm:px-2">
-      <Bash />
+        <Bash />
       </div>
     </div>
   );
