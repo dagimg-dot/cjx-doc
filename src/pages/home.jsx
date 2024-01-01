@@ -5,7 +5,7 @@ import Default from "../layout/Default";
 const Home = () => {
   return (
     <div className="bg-bodyGradient">
-      <div className="h-screen">
+      <div className="h-[100dvh]">
         <Default>
           <Hero />
         </Default>

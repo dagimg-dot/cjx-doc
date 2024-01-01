@@ -5,7 +5,7 @@ import RightSidebar from "../component/RightSidebar";
 
 const Docs = () => {
   return (
-    <div className="bg-bodyGradient h-screen">
+    <div className="bg-bodyGradient h-[100dvh]">
         <Default>
           <div className="grid grid-cols-5 h-full w-full pt-28 px-28 text-white mdsm:pl-5 maxmd:pl-4 maxmd:pr-0 maxmd:grid-cols-6 mimd:px-14 text-[13px] maxx:px-14">
             <div className="flex flex-col border-r border-custom-white overflow-y-auto mdsm:hidden maxmd:col-span-2">
