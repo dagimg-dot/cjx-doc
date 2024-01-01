@@ -18,6 +18,7 @@ const DocBody = () => {
     setPage(currentPage);
     setPrevBtnDisabled(getIndex(currentPage) === 0);
     setNextBtnDisabled(getIndex(currentPage) === docPagesList.length - 1);
+    document.querySelector("h1").scrollIntoView({ behavior: "smooth" });
   }, [currentPage]);
 
   const getIndex = (_page = page) => docPagesList.indexOf(_page);
