@@ -18,7 +18,10 @@ const SideNavBar = ({ onClick, isOpen }) => {
               </div>
               <div className="flex flex-col mt-14 gap-4 text-header-white tracking-[1.5px]">
                 <li className="list-none">
-                  <Link to="/docs/Getting-Started/Prerequisites" className="relative nav-bar ">
+                  <Link
+                    to="/docs/Getting-Started/Prerequisites"
+                    className="relative nav-bar"
+                  >
                     DOCS
                   </Link>
                 </li>
