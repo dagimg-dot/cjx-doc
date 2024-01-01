@@ -3,10 +3,22 @@ import { PAGES } from "../utils/types";
 import logo from "../assets/image/cjx-logo.png";
 import LeftSidebar from "./LeftSidebar";
 import { FaGithub } from "react-icons/fa";
+import { useEffect } from "react";
 
 const SideNavBar = ({ onClick, isOpen }) => {
   const { pathname } = useLocation();
   const isDocPage = pathname.split("/")[1] === PAGES.DOCS;
+
+  useEffect(() => {
+    const handleSubMenuClick = (event) => {
+      if (event.target.nodeName === "A") {
+        onClick();
+      }
+    };
+
+    document.addEventListener("click", handleSubMenuClick);
+    return () => document.removeEventListener("click", handleSubMenuClick);
+  }, []);
 
   return (
     <div className="hidden mdsm:flex mdsm:flex-col">
