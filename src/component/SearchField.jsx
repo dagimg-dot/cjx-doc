@@ -89,7 +89,6 @@ const SearchField = () => {
       if (index == -1) {
         return;
       }
-      navigate(`#${results[index]}`);
       handleResultClick(results[index]);
     }
   };
