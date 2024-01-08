@@ -1,5 +1,5 @@
 import jeremi from "../assets/image/Jeremi.jpg";
-import jd from "../assets/image/jd.jpg";
+import daggi from "../assets/image/daggi.jpg"
 import Socials from "../component/Socials";
 import Default from "../layout/Default";
 
@@ -44,7 +44,7 @@ const Contact = () => {
               <h2>Student at BiT</h2>
             </div>
             <div className="flex flex-col justify-center items-center gap-4">
-              <img src={jd} className="rounded-[100%] w-64 h-64" />
+              <img src={daggi} className="rounded-[100%] w-64 h-64" />
               <h1>Dagim G. Astatkie</h1>
             </div>
           </div>
